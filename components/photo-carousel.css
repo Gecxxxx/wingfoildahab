@@ -1,0 +1,98 @@
+.photo-carousel,
+.photo-carousel * {
+  box-sizing: border-box;
+}
+
+.photo-carousel {
+  height: 431px;
+  padding-top: 15px;
+  overflow: hidden;
+  background: #000;
+}
+
+.photo-carousel__main {
+  position: relative;
+  width: min(1200px, 100%);
+  height: 416px;
+  margin: 0 auto;
+}
+
+.photo-carousel__viewport {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+
+.photo-carousel__track {
+  display: flex;
+  height: 400px;
+  transition: transform 500ms ease;
+  will-change: transform;
+}
+
+.photo-carousel__slide {
+  flex: 0 0 100%;
+  height: 400px;
+  padding: 0 20px;
+}
+
+.photo-carousel__image {
+  width: 100%;
+  height: 400px;
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.photo-carousel__arrow {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  width: 101.5px;
+  height: 400px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.photo-carousel__arrow::after {
+  position: absolute;
+  top: 50%;
+  width: 13px;
+  height: 25px;
+  margin-top: -12.5px;
+  background: url('../assets/carousel/arrow.svg') center / contain no-repeat;
+  content: '';
+}
+
+.photo-carousel__arrow--prev {
+  left: 0;
+}
+
+.photo-carousel__arrow--prev::after {
+  left: 71px;
+  transform: rotate(180deg);
+}
+
+.photo-carousel__arrow--next {
+  right: 0;
+}
+
+.photo-carousel__arrow--next::after {
+  right: 51px;
+}
+
+@media (max-width: 1200px) {
+  .photo-carousel__slide {
+    padding: 0 10px;
+  }
+
+  .photo-carousel__arrow--prev::after {
+    left: 30px;
+  }
+
+  .photo-carousel__arrow--next::after {
+    right: 30px;
+  }
+}

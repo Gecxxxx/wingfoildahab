@@ -1,0 +1,168 @@
+.dahab-section,
+.dahab-section * {
+  box-sizing: border-box;
+}
+
+.dahab-section {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px 40px 80px;
+  background: #000;
+  color: #fff;
+  font-family: "Raleway", sans-serif;
+  line-height: 1.5;
+}
+
+.dahab-title {
+  margin: 0 0 40px;
+  padding: 0;
+  font-size: clamp(32px, 4vw, 54px);
+  font-weight: 300;
+  letter-spacing: 2px;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.dahab-orange {
+  color: #ff5a1f;
+  font-weight: 700;
+}
+
+.dahab-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 60px;
+}
+
+.dahab-photo-monolith {
+  display: flex;
+  flex: 1.2;
+  height: 650px;
+  gap: 6px;
+}
+
+.dahab-photo-col {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.dahab-photo-col--left {
+  flex: 1.15;
+}
+
+.dahab-image-box {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.dahab-image-box--large {
+  flex: 1.4;
+}
+
+.dahab-image-box--small {
+  flex: 1;
+}
+
+.dahab-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.dahab-info {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 20px;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 15px;
+}
+
+.dahab-info p {
+  margin: 0;
+  padding: 0;
+}
+
+.dahab-info b {
+  color: #fff;
+  font-weight: 700;
+}
+
+.dahab-divider {
+  height: 1px;
+  margin: 5px 0;
+  background: linear-gradient(90deg, rgba(204, 0, 0, 0.7), rgba(204, 0, 0, 0));
+}
+
+.dahab-actions {
+  display: flex;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.dahab-btn {
+  padding: 15px 30px;
+  border: 1px solid #ff5a1f;
+  border-radius: 12px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 300ms ease, box-shadow 300ms ease;
+}
+
+.dahab-btn--outline {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.dahab-btn--fill {
+  background: #ff5a1f;
+}
+
+.dahab-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 90, 31, 0.4);
+}
+
+@media (max-width: 1100px) {
+  .dahab-wrapper {
+    flex-direction: column;
+  }
+
+  .dahab-photo-monolith {
+    width: 100%;
+    height: 500px;
+  }
+
+  .dahab-title {
+    text-align: center;
+  }
+
+  .dahab-actions {
+    justify-content: center;
+  }
+}
+
+@media (min-width: 1200px) {
+  .dahab-title {
+    font-size: 54px;
+  }
+}
+
+@media (max-width: 480px) {
+  .dahab-actions {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .dahab-btn {
+    width: 100%;
+  }
+}

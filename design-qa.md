@@ -32,6 +32,8 @@ The header and hero were compared at 1363 × 936. Header bounds match at x=0, y=
 - `?clean=1` verification mode hides every remaining `.t-rec` block and renders only migrated components; its document height is exactly 936 px at the desktop viewport.
 - Independent `/clean/` route contains only the rewritten header and hero components. It has no Tilda records, scripts, stylesheets or runtime references.
 - Tripadvisor ticker on `/clean/` matches the source at x=0, y=936, width=1348 and height=50. Its 15-second linear marquee, gradient, typography, review copy and outbound URL are preserved.
+- Photo carousel matches the source block at x=0, y=986, width=1348 and height=431. The visible image is centered at x=94, y=1001, width=1160 and height=400; six local slides, 500 ms transitions, 5-second autoplay, arrows and swipe are implemented.
+- “Мы находимся в Дахабе” matches the source at x=0, y=1417, width=1348 and height=953.5. Title, two-column layout, four local images, full copy, dividers and buttons are preserved.
 
 ## Console check
 
@@ -55,10 +57,12 @@ No page-breaking application errors. One browser-extension metadata error is ext
 - Hero post-fix evidence: source and component both render at x=0, y=0, 1348 × 936. The content grid matches at x=0, y=516, 1348 × 420; the information badge matches at x=40, y=549.875, 620 × 76.171875; the CTA grid matches at x=816.796875, y=720, 491.203125 × 116. The document remains 17955 px tall. Contact modal open/close and training scroll actions were tested.
 - Clean-route iteration: added `/clean/` as a separate page instead of hiding legacy records with a query parameter. The route loads only `components/header.*`, `components/hero.*`, local image assets and the Raleway font; the page intentionally ends after the hero.
 - Tripadvisor iteration: recreated the first post-hero record as `components/tripadvisor.*`. The clean document is now 986 px tall at 1363 × 936, contains no `.t-rec` elements and loads no Tilda scripts or stylesheets.
+- Photo-carousel iteration: recreated the 431 px source carousel as `components/photo-carousel.*` using six downloaded local source images and the source arrow asset.
+- Dahab-section iteration: recreated the complete first editorial section as `components/dahab.*` using four downloaded local source images. Its title starts at y=1437 and content wrapper at y=1558, matching the original.
 
 ## Implementation checklist
 
-1. Convert the following photo carousel with local assets.
+1. Convert the “Наша акватория” section that follows.
 2. Re-run same-viewport comparison after each conversion.
 3. Address mobile only after desktop remains identical.
 
