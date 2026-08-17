@@ -37,19 +37,22 @@ No page-breaking application errors. One browser-extension metadata error is ext
 ## Findings
 
 - No actionable P0/P1/P2 visual differences in the desktop baseline.
-- P3: the baseline still contains Tilda runtime and remote asset references. This is a technical migration task, not a visual discrepancy. Every replacement must retain this baseline visually.
+- Header migration: passed — the fixed header no longer depends on its former Tilda HTML block or inline assembly script.
+- P3: the remaining page still contains Tilda runtime and remote asset references. Every replacement must retain this baseline visually.
 
 ## Comparison history
 
 - Earlier prototype was rejected because it was a redesign rather than a clone.
 - Fix: restored the exact current Russian page as the visual baseline.
 - Post-fix evidence: equal 1363 × 17955 geometry, equal 90 px header, and equal font, background and navigation properties.
+- Header component iteration: replaced the Tilda header record with an independent component and local logo/social assets.
+- Header post-fix evidence: source and component both render at x=0, y=0, 1348 × 90; both logos render at x=40, y=18.125, 110 × 45.75; navigation labels and full document height are unchanged. The Training anchor resolves to the exact expected 7445 px scroll position.
 
 ## Implementation checklist
 
-1. Convert one section at a time while preserving this baseline.
-2. Localize original assets without changing crop or dimensions.
-3. Re-run same-viewport comparison after every converted section.
+1. Convert the hero while preserving the baseline.
+2. Localize original hero assets without changing crop or dimensions.
+3. Re-run same-viewport comparison after the hero conversion.
 4. Address mobile only after desktop remains identical.
 
 final result: passed
