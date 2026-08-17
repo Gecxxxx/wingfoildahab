@@ -29,6 +29,7 @@ The header and hero were compared at 1363 × 936. Header bounds match at x=0, y=
 - Fixed desktop navigation and in-page anchors are present.
 - Equipment, organizers, windsurfing, social and language destinations are preserved.
 - Hero carousel and Windguru widget initialize.
+- `?clean=1` verification mode hides every remaining `.t-rec` block and renders only migrated components; its document height is exactly 936 px at the desktop viewport.
 
 ## Console check
 
