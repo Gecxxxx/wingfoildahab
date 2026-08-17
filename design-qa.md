@@ -40,6 +40,9 @@ The header and hero were compared at 1363 × 936. Header bounds match at x=0, y=
 - “Процесс обучения” matches the source at x=0, y=5988.078, width=1348 and height=1546.547. The four original YouTube videos and desktop grid geometry are preserved; no Tilda runtime is used.
 - “Ваш путь к первому полёту” matches the source at x=0, y=7534.625, width=1348 and height=859.594. Four local images, card states, keyboard activation and the detailed modal are implemented.
 - “Цены” matches the source at x=0, y=8394.219, width=1348 and height=1414.813. Six local images, price cards, CTAs and the detailed modal are implemented.
+- “Пакеты обучения” matches the source at x=0, y=9809.031, width=1348 and height=1541.625. Both tabs, all eleven local package images, card states, form scroll and details modal are implemented.
+- Guest gallery matches the source at x=0, y=11350.656, width=1348 and height=981. Thirteen local source images, arrows, dots, five-second autoplay, swipe and Telegram CTA are implemented.
+- “Связаться с нами” matches the source at x=0, y=12331.656, width=1348 and height=265.188. The contact trigger, local social icons, links, keyboard support and modal are implemented.
 
 ## Console check
 
@@ -71,10 +74,13 @@ No page-breaking application errors. One browser-extension metadata error is ext
 - Training-process iteration: recreated the source video section as `components/process.*`; the videos remain standard YouTube embeds by design, while all layout and styling are independent of Tilda.
 - Training-path iteration: recreated four training-step cards and their modal as `components/steps.*` with local source images.
 - Prices iteration: recreated all six price cards and their modal as `components/prices.*` with local source images.
+- Packages iteration: recreated both package tabs and the details modal as `components/packages.*` with eleven local source images.
+- Guest-gallery iteration: recreated the thirteen-slide guest carousel as `components/guest-gallery.*`; one oversized source JPEG was losslessly resized for web delivery as a local WebP.
+- Contact-intro iteration: recreated the contact heading and full contact modal as `components/contact-intro.*` with local social assets.
 
 ## Implementation checklist
 
-1. Convert the following training-package section.
+1. Convert the following contact form section.
 2. Re-run same-viewport comparison after each conversion.
 3. Address mobile only after desktop remains identical.
 
