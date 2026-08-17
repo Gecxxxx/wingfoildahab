@@ -75,7 +75,8 @@ No page-breaking application errors. One browser-extension metadata error is ext
 - Training-path iteration: recreated four training-step cards and their modal as `components/steps.*` with local source images.
 - Prices iteration: recreated all six price cards and their modal as `components/prices.*` with local source images.
 - Packages iteration: recreated both package tabs and the details modal as `components/packages.*` with eleven local source images.
-- Guest-gallery iteration: recreated the thirteen-slide guest carousel as `components/guest-gallery.*`; one oversized source JPEG was losslessly resized for web delivery as a local WebP.
+- Guest-gallery iteration: recreated the thirteen-slide guest carousel as `components/guest-gallery.*`; all source images were re-downloaded in full and optimized as local WebP files.
+- Asset repair: replaced the truncated images from the original Tilda export with complete source downloads for all eleven package cards and all thirteen gallery slides.
 - Contact-intro iteration: recreated the contact heading and full contact modal as `components/contact-intro.*` with local social assets.
 
 ## Implementation checklist
