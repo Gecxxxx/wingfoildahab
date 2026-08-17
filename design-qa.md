@@ -37,6 +37,9 @@ The header and hero were compared at 1363 × 936. Header bounds match at x=0, y=
 - “Наша акватория” matches the source at x=0, y=2370.5, width=1348 and height=956.656. Both local map states, cards, controls and contact action are preserved.
 - “Наша команда” matches the source at x=0, y=3327.156, width=1348 and height=1820.047. Six local portraits, two-row card grid, copy, hover states and CTA are preserved.
 - “Мы научим вас летать” matches the source at x=0, y=5147.203, width=1348 and height=840.875. Local background, four local icons, glass cards and both actions are preserved.
+- “Процесс обучения” matches the source at x=0, y=5988.078, width=1348 and height=1546.547. The four original YouTube videos and desktop grid geometry are preserved; no Tilda runtime is used.
+- “Ваш путь к первому полёту” matches the source at x=0, y=7534.625, width=1348 and height=859.594. Four local images, card states, keyboard activation and the detailed modal are implemented.
+- “Цены” matches the source at x=0, y=8394.219, width=1348 and height=1414.813. Six local images, price cards, CTAs and the detailed modal are implemented.
 
 ## Console check
 
@@ -65,10 +68,13 @@ No page-breaking application errors. One browser-extension metadata error is ext
 - Aquatory iteration: recreated the interactive satellite/map section as `components/aquatory.*` with three local source assets and working state buttons.
 - Team iteration: recreated the full six-person section as `components/team.*` with six local portraits and source-matched animation/hover behavior.
 - Fly iteration: recreated the four-benefit section as `components/fly.*` with the local source background and four local source icons.
+- Training-process iteration: recreated the source video section as `components/process.*`; the videos remain standard YouTube embeds by design, while all layout and styling are independent of Tilda.
+- Training-path iteration: recreated four training-step cards and their modal as `components/steps.*` with local source images.
+- Prices iteration: recreated all six price cards and their modal as `components/prices.*` with local source images.
 
 ## Implementation checklist
 
-1. Convert the following training-process media section.
+1. Convert the following training-package section.
 2. Re-run same-viewport comparison after each conversion.
 3. Address mobile only after desktop remains identical.
 
