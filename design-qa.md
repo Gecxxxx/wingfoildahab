@@ -34,6 +34,9 @@ The header and hero were compared at 1363 × 936. Header bounds match at x=0, y=
 - Tripadvisor ticker on `/clean/` matches the source at x=0, y=936, width=1348 and height=50. Its 15-second linear marquee, gradient, typography, review copy and outbound URL are preserved.
 - Photo carousel matches the source block at x=0, y=986, width=1348 and height=431. The visible image is centered at x=94, y=1001, width=1160 and height=400; six local slides, 500 ms transitions, 5-second autoplay, arrows and swipe are implemented.
 - “Мы находимся в Дахабе” matches the source at x=0, y=1417, width=1348 and height=953.5. Title, two-column layout, four local images, full copy, dividers and buttons are preserved.
+- “Наша акватория” matches the source at x=0, y=2370.5, width=1348 and height=956.656. Both local map states, cards, controls and contact action are preserved.
+- “Наша команда” matches the source at x=0, y=3327.156, width=1348 and height=1820.047. Six local portraits, two-row card grid, copy, hover states and CTA are preserved.
+- “Мы научим вас летать” matches the source at x=0, y=5147.203, width=1348 and height=840.875. Local background, four local icons, glass cards and both actions are preserved.
 
 ## Console check
 
@@ -59,10 +62,13 @@ No page-breaking application errors. One browser-extension metadata error is ext
 - Tripadvisor iteration: recreated the first post-hero record as `components/tripadvisor.*`. The clean document is now 986 px tall at 1363 × 936, contains no `.t-rec` elements and loads no Tilda scripts or stylesheets.
 - Photo-carousel iteration: recreated the 431 px source carousel as `components/photo-carousel.*` using six downloaded local source images and the source arrow asset.
 - Dahab-section iteration: recreated the complete first editorial section as `components/dahab.*` using four downloaded local source images. Its title starts at y=1437 and content wrapper at y=1558, matching the original.
+- Aquatory iteration: recreated the interactive satellite/map section as `components/aquatory.*` with three local source assets and working state buttons.
+- Team iteration: recreated the full six-person section as `components/team.*` with six local portraits and source-matched animation/hover behavior.
+- Fly iteration: recreated the four-benefit section as `components/fly.*` with the local source background and four local source icons.
 
 ## Implementation checklist
 
-1. Convert the “Наша акватория” section that follows.
+1. Convert the following training-process media section.
 2. Re-run same-viewport comparison after each conversion.
 3. Address mobile only after desktop remains identical.
 
