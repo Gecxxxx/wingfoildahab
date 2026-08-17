@@ -31,6 +31,7 @@ The header and hero were compared at 1363 × 936. Header bounds match at x=0, y=
 - Hero carousel and Windguru widget initialize.
 - `?clean=1` verification mode hides every remaining `.t-rec` block and renders only migrated components; its document height is exactly 936 px at the desktop viewport.
 - Independent `/clean/` route contains only the rewritten header and hero components. It has no Tilda records, scripts, stylesheets or runtime references.
+- Tripadvisor ticker on `/clean/` matches the source at x=0, y=936, width=1348 and height=50. Its 15-second linear marquee, gradient, typography, review copy and outbound URL are preserved.
 
 ## Console check
 
@@ -53,12 +54,12 @@ No page-breaking application errors. One browser-extension metadata error is ext
 - Hero component iteration: replaced the Tilda hero record with an independent component, nine local slides and a local decorative rider asset.
 - Hero post-fix evidence: source and component both render at x=0, y=0, 1348 × 936. The content grid matches at x=0, y=516, 1348 × 420; the information badge matches at x=40, y=549.875, 620 × 76.171875; the CTA grid matches at x=816.796875, y=720, 491.203125 × 116. The document remains 17955 px tall. Contact modal open/close and training scroll actions were tested.
 - Clean-route iteration: added `/clean/` as a separate page instead of hiding legacy records with a query parameter. The route loads only `components/header.*`, `components/hero.*`, local image assets and the Raleway font; the page intentionally ends after the hero.
+- Tripadvisor iteration: recreated the first post-hero record as `components/tripadvisor.*`. The clean document is now 986 px tall at 1363 × 936, contains no `.t-rec` elements and loads no Tilda scripts or stylesheets.
 
 ## Implementation checklist
 
-1. Convert the Tripadvisor ticker while preserving the baseline.
-2. Convert the following photo carousel with local assets.
-3. Re-run same-viewport comparison after each conversion.
-4. Address mobile only after desktop remains identical.
+1. Convert the following photo carousel with local assets.
+2. Re-run same-viewport comparison after each conversion.
+3. Address mobile only after desktop remains identical.
 
 final result: passed
