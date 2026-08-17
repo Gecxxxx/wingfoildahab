@@ -5,7 +5,7 @@ import { extname, join, normalize } from "node:path";
 const args = process.argv.slice(2);
 const portArg = args.indexOf("--port");
 const port = portArg >= 0 ? Number(args[portArg + 1]) : 4173;
-const root = join(process.cwd(), "public");
+const root = process.cwd();
 
 const types = {
   ".css": "text/css; charset=utf-8",
