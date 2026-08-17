@@ -43,6 +43,12 @@ The header and hero were compared at 1363 × 936. Header bounds match at x=0, y=
 - “Пакеты обучения” matches the source at x=0, y=9809.031, width=1348 and height=1541.625. Both tabs, all eleven local package images, card states, form scroll and details modal are implemented.
 - Guest gallery matches the source at x=0, y=11350.656, width=1348 and height=981. Thirteen local source images, arrows, dots, five-second autoplay, swipe and Telegram CTA are implemented.
 - “Связаться с нами” matches the source at x=0, y=12331.656, width=1348 and height=265.188. The contact trigger, local social icons, links, keyboard support and modal are implemented.
+- Contact form matches the source at x=0, y=12596.844, width=1348 and height=547.688. Local source image, required fields, contact-method selector, validation and success state are implemented.
+- Reviews match the source at x=0, y=13144.531, width=1348 and height=536.563. Five local avatars, navigation and Tripadvisor link are implemented.
+- “Как добраться” matches the source at x=0, y=13681.094, width=1348 and height=888.656 with local source imagery and transfer CTA.
+- Hotels match the source at x=0, y=14569.75, width=1348 and height=773. All five local images, tabs, descriptions and Booking links are implemented.
+- FAQ matches the source at x=0, y=15342.75, width=1348 and height=733. All seven questions use a working single-open accordion.
+- Contacts, forecast, Windguru, map and footer reproduce the source sequence from y=16075.75 through y=17955.391. Contact and footer assets are local; Windguru and Google Maps remain their original external services.
 
 ## Console check
 
@@ -78,11 +84,11 @@ No page-breaking application errors. One browser-extension metadata error is ext
 - Guest-gallery iteration: recreated the thirteen-slide guest carousel as `components/guest-gallery.*`; all source images were re-downloaded in full and optimized as local WebP files.
 - Asset repair: replaced the truncated images from the original Tilda export with complete source downloads for all eleven package cards and all thirteen gallery slides.
 - Contact-intro iteration: recreated the contact heading and full contact modal as `components/contact-intro.*` with local social assets.
+- Remaining-page iteration: recreated the form, reviews, directions, hotel tabs, FAQ, contacts, forecast, map and footer as `components/remaining.*` with local source assets.
 
 ## Implementation checklist
 
-1. Convert the following contact form section.
-2. Re-run same-viewport comparison after each conversion.
-3. Address mobile only after desktop remains identical.
+1. Desktop Russian page conversion is complete from hero through footer.
+2. Address mobile only after desktop remains identical.
 
 final result: passed
