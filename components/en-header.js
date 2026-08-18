@@ -5,12 +5,14 @@
   const root = new URL('../', document.currentScript.src);
   const asset = name => new URL(`assets/en-header/${name}`, root).href;
   const route = path => new URL(path, root).href;
+  const onHome = Boolean(document.getElementById('vf-en-hero-root'));
+  const section = id => onHome ? id : route(id);
   const menu = [
-    ['#learning', 'Learning'],
+    [section('#learning'), 'Learning'],
     [route('equipment/'), 'Equipment'],
-    ['#forecast', 'Forecast'],
-    ['#team', 'Team'],
-    ['#faq', 'FAQ'],
+    [section('#forecast'), 'Forecast'],
+    [section('#team'), 'Team'],
+    [section('#faq'), 'FAQ'],
     [route('organizers/'), 'Organizers'],
     ['https://vetratoria.ru/', 'Windsurf', 'special'],
   ];
