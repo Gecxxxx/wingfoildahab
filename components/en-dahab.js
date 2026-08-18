@@ -10,12 +10,12 @@
       <div class="dahab-wrapper">
         <div class="dahab-photo-monolith">
           <div class="dahab-photo-col dahab-photo-col--left">
-            <div class="dahab-image-box dahab-image-box--large"><img class="dahab-image" src="${asset('photo-01.jpg')}" loading="lazy" decoding="async" alt="Wingfoiling in Dahab"></div>
-            <div class="dahab-image-box dahab-image-box--small"><img class="dahab-image" src="${asset('photo-02.jpg')}" loading="lazy" decoding="async" alt="Vetratoria station"></div>
+            <div class="dahab-image-box dahab-image-box--large"><img class="dahab-image" src="${asset('photo-01.webp')}" loading="lazy" decoding="async" alt="Wingfoiling in Dahab"></div>
+            <div class="dahab-image-box dahab-image-box--small"><img class="dahab-image" src="${asset('photo-02.webp')}" loading="lazy" decoding="async" alt="Vetratoria station"></div>
           </div>
           <div class="dahab-photo-col">
             <div class="dahab-image-box dahab-image-box--small"><img class="dahab-image" src="${asset('photo-03.webp')}" loading="lazy" decoding="async" alt="Wingfoil riding"></div>
-            <div class="dahab-image-box dahab-image-box--large"><img class="dahab-image" src="${asset('photo-04.jpg')}" loading="lazy" decoding="async" alt="Wingfoiler in Dahab"></div>
+            <div class="dahab-image-box dahab-image-box--large"><img class="dahab-image" src="${asset('photo-04.webp')}" loading="lazy" decoding="async" alt="Wingfoiler in Dahab"></div>
           </div>
         </div>
         <div class="dahab-info">

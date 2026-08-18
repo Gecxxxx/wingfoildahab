@@ -6,11 +6,11 @@
   const asset = (name) => new URL(`assets/carousel/${name}`, root).href;
   const images = [
     'slide-01.webp',
-    'slide-02.jpg',
-    'slide-03.jpg',
-    'slide-04.jpg',
+    'slide-02.webp',
+    'slide-03.webp',
+    'slide-04.webp',
     'slide-05.webp',
-    'slide-06.jpg',
+    'slide-06.webp',
   ];
 
   mount.innerHTML = `

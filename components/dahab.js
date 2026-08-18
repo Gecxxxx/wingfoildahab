@@ -11,12 +11,12 @@
       <div class="dahab-wrapper">
         <div class="dahab-photo-monolith">
           <div class="dahab-photo-col dahab-photo-col--left">
-            <div class="dahab-image-box dahab-image-box--large"><img class="dahab-image" src="${asset('photo-01.jpg')}" alt="Вингфойлинг в Дахабе"></div>
-            <div class="dahab-image-box dahab-image-box--small"><img class="dahab-image" src="${asset('photo-02.jpg')}" alt="Станция Ветратория"></div>
+            <div class="dahab-image-box dahab-image-box--large"><img class="dahab-image" src="${asset('photo-01.webp')}" alt="Вингфойлинг в Дахабе" loading="lazy" decoding="async"></div>
+            <div class="dahab-image-box dahab-image-box--small"><img class="dahab-image" src="${asset('photo-02.webp')}" alt="Станция Ветратория" loading="lazy" decoding="async"></div>
           </div>
           <div class="dahab-photo-col">
-            <div class="dahab-image-box dahab-image-box--small"><img class="dahab-image" src="${asset('photo-03.webp')}" alt="Катание на вингфойле"></div>
-            <div class="dahab-image-box dahab-image-box--large"><img class="dahab-image" src="${asset('photo-04.jpg')}" alt="Вингфойлер в Дахабе"></div>
+            <div class="dahab-image-box dahab-image-box--small"><img class="dahab-image" src="${asset('photo-03.webp')}" alt="Катание на вингфойле" loading="lazy" decoding="async"></div>
+            <div class="dahab-image-box dahab-image-box--large"><img class="dahab-image" src="${asset('photo-04.webp')}" alt="Вингфойлер в Дахабе" loading="lazy" decoding="async"></div>
           </div>
         </div>
         <div class="dahab-info">

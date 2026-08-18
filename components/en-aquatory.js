@@ -11,8 +11,8 @@
     <div class="da-card"><h3>03. WAVE ZONE</h3><p>Venture beyond the reef to long, rolling swells. The ultimate territory for true wing-surfing in the open sea.</p></div>
     <div class="da-action-wrapper"><a href="#booking-form-en" class="da-main-btn">Contact Us</a></div>
   </div><div class="da-right"><div class="da-interactive-zone"><div class="da-screen">
-    <div class="da-img-item active"><img src="${asset('satellite.jpg')}" loading="lazy" decoding="async" alt="Satellite view"></div>
-    <div class="da-img-item"><img data-src="${asset('map.jpg')}" loading="lazy" decoding="async" alt="Spot map"></div>
+    <div class="da-img-item active"><img src="${asset('satellite.webp')}" loading="lazy" decoding="async" alt="Satellite view"></div>
+    <div class="da-img-item"><img data-src="${asset('map.webp')}" loading="lazy" decoding="async" alt="Spot map"></div>
   </div><div class="da-controls"><button class="da-btn active" type="button" data-map="0">Satellite</button><button class="da-btn" type="button" data-map="1">Spot Map</button></div></div></div></div></section>`;
   const slides = [...mount.querySelectorAll('.da-img-item')];
   const buttons = [...mount.querySelectorAll('[data-map]')];

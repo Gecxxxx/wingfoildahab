@@ -19,8 +19,8 @@
         <div class="da-right">
           <div class="da-interactive-zone">
             <div class="da-screen">
-              <div class="da-img-item active"><img src="${asset('satellite.jpg')}" alt="Вид со спутника"></div>
-              <div class="da-img-item"><img src="${asset('map.jpg')}" alt="Карта спота"></div>
+              <div class="da-img-item active"><img src="${asset('satellite.webp')}" alt="Вид со спутника" loading="lazy" decoding="async"></div>
+              <div class="da-img-item"><img src="${asset('map.webp')}" alt="Карта спота" loading="lazy" decoding="async"></div>
             </div>
             <div class="da-controls">
               <button class="da-btn active" type="button" data-map="0">Спутник</button>
