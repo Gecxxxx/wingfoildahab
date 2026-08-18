@@ -11,7 +11,7 @@
     ['#forecast', 'Forecast'],
     ['#team', 'Team'],
     ['#faq', 'FAQ'],
-    ['https://wingfoildahab.com/organizers', 'Organizers'],
+    [route('organizers/'), 'Organizers'],
     ['https://vetratoria.ru/', 'Windsurf', 'special'],
   ];
   const links = menu.map(([href, text, extra = '']) =>
@@ -29,7 +29,7 @@
         <nav class="vf-desk-nav" aria-label="Main navigation"><div class="vf-desk-nav-inner">${links}</div></nav>
         <div class="vf-desk-right">
           <div class="vf-social">${socials}</div>
-          <div class="vf-lang-switcher"><a href="${route('en/')}" class="vf-lang-btn active">EN</a><a href="${route('clean/')}" class="vf-lang-btn">РУС</a></div>
+          <div class="vf-lang-switcher"><a href="${route('en/')}" class="vf-lang-btn active">EN</a><a href="${route('ru/')}" class="vf-lang-btn">РУС</a></div>
           <button class="vf-burger" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
         </div>
       </div>

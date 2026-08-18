@@ -14,7 +14,7 @@
   ];
 
   mount.innerHTML = `
-    <section class="team-section uc-team">
+    <section class="team-section uc-team" id="team">
       <div class="team-container">
         <div class="team-header team-fade-up team-delay-1"><h2>Наша <span class="team-orange">Команда</span></h2><p>В нашей школе работают опытные инструктора, которые уже научили вингфойлингу 1500+ людей!</p></div>
         <div class="team-grid">

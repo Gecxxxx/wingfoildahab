@@ -3,7 +3,7 @@
   if (!mount) return;
 
   mount.innerHTML = `
-    <section class="edu-section">
+    <section class="edu-section" id="learning">
       <div class="edu-container">
         <div class="edu-fade-up"><span class="edu-subtitle">Вингфойлинг станция</span><h2 class="edu-title">Процесс <span class="edu-orange">обучения</span></h2></div>
         <div class="main-video-wrapper edu-fade-up edu-delay-2"><iframe src="https://www.youtube.com/embed/TaQIUHefI24?rel=0&amp;modestbranding=1" title="Основной процесс обучения" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
