@@ -8,6 +8,8 @@ Code-based migration of [wingfoildahab.com](https://wingfoildahab.com) from Tild
 - `/ru` — Russian home page
 - `/equipment` — English equipment and rental page
 - `/equipment-ru` — Russian equipment and rental page
+- `/organizers` — English page for camp organizers
+- `/organizers-ru` — Russian page for camp organizers
 
 ## Local preview
 
@@ -25,5 +27,4 @@ The resulting static site is written to `dist/` and can be served directly by Ng
 
 ## Migration status
 
-The first checkpoint preserves the current desktop markup and appearance while the code-native responsive rebuild is prepared. The production domain still points to Tilda.
-
+The production tree is fully code-native and contains no Tilda runtime, exported pages, styles, scripts, or remote Tilda assets.

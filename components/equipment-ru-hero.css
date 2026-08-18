@@ -1,0 +1,10 @@
+.equipment-hero,.equipment-hero *{box-sizing:border-box}
+.equipment-hero{position:relative;min-height:976px;padding:90px 20px 80px;display:flex;align-items:flex-start;justify-content:center;overflow:hidden;background:#060606 url('../assets/equipment-ru-hero-bg.webp') center/cover no-repeat;color:#fff;text-align:center;font-family:"Raleway",sans-serif}
+.equipment-hero::before{position:absolute;inset:0;background:rgba(0,0,0,.54);content:""}
+.equipment-hero__content{position:relative;z-index:1;width:600px;max-width:100%;margin-top:176px}
+.equipment-hero__kicker{margin:0 0 25px;font-size:14px;font-weight:400;line-height:16px;text-transform:uppercase}
+.equipment-hero__title{margin:0 0 15px;font-size:68px;font-weight:600;line-height:1.1;text-transform:uppercase}
+.equipment-hero__subtitle{margin:0 0 35px;font-size:48px;font-weight:300;line-height:56px}
+.equipment-hero__description{width:450px;max-width:100%;margin:0 auto;color:rgba(255,255,255,.95);font-size:18px;font-weight:400;line-height:27px}
+.equipment-hero__description a{color:#ff8562;font-weight:600;text-decoration:none}
+@media(max-width:700px){.equipment-hero{min-height:760px;padding-top:90px}.equipment-hero__content{margin-top:120px}.equipment-hero__title{font-size:44px}.equipment-hero__subtitle{font-size:34px;line-height:1.2}.equipment-hero__description{font-size:16px;line-height:24px}}
