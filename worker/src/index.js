@@ -83,6 +83,10 @@ async function handleLead(request, env) {
   const subscribers = await listSubscribers(env);
   if (!subscribers.length) return json({ ok: false, error: "no_subscribers" }, 503);
 
+  const leadId = `${Date.now()}-${crypto.randomUUID()}`;
+  const lead = { leadId, name, email, method, contact, page, createdAt: new Date().toISOString(), status: "pending" };
+  await env.SUBSCRIBERS.put(`lead:${leadId}`, JSON.stringify(lead), { expirationTtl: 60 * 60 * 24 * 90 });
+
   const text = [
     "🚀 <b>Новая заявка с wingfoildahab.com</b>",
     "",
@@ -101,8 +105,14 @@ async function handleLead(request, env) {
   })));
 
   const delivered = results.filter((result) => result.status === "fulfilled" && result.value.ok).length;
-  if (!delivered) return json({ ok: false, error: "delivery_failed" }, 502);
-  return json({ ok: true, delivered });
+  await env.SUBSCRIBERS.put(`lead:${leadId}`, JSON.stringify({
+    ...lead,
+    status: delivered ? "delivered" : "delivery_failed",
+    delivered,
+    deliveryAttemptedAt: new Date().toISOString(),
+  }), { expirationTtl: 60 * 60 * 24 * 90 });
+  if (!delivered) return json({ ok: false, error: "delivery_failed", leadId }, 502);
+  return json({ ok: true, delivered, leadId });
 }
 
 export default {
