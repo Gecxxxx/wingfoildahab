@@ -12,6 +12,19 @@ for (const entry of [
   "equipment-ru",
   "organizers",
   "organizers-ru",
+  "why-bb-talkin",
+  "why-bb-talkin-en",
+  "history-of-wingfoil",
+  "history-of-wingfoil-en",
+  "wingfoil-racing-freestyle",
+  "wingfoil-racing-freestyle-en",
+  "wingfoil-for-beginners",
+  "kite-wingfoil-or-windsurf",
+  "why-dahab",
+  "robots.txt",
+  "sitemap.xml",
+  "_redirects",
+  "_headers",
 ]) {
   cpSync(entry, `dist/${entry}`, { recursive: true });
 }

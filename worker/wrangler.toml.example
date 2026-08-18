@@ -1,0 +1,13 @@
+name = "wingfoildahab-leads"
+main = "src/index.js"
+compatibility_date = "2026-08-18"
+
+[vars]
+ALLOWED_ORIGINS = "https://wingfoildahab.com,https://www.wingfoildahab.com,https://wingfoildahab.pages.dev"
+
+[[kv_namespaces]]
+binding = "SUBSCRIBERS"
+id = "PASTE_KV_NAMESPACE_ID_HERE"
+
+# Add a production route after the domain is connected to Cloudflare:
+# routes = [{ pattern = "wingfoildahab.com/api/*", zone_name = "wingfoildahab.com" }]

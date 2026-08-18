@@ -18,5 +18,4 @@
   mount.querySelector('.remain-review-prev').addEventListener('click',()=>move(-1));
   mount.querySelector('.remain-review-next').addEventListener('click',()=>move(1));
   addEventListener('resize',()=>move(0));
-  mount.querySelector('.remain-form form').addEventListener('submit',event=>{event.preventDefault();mount.querySelector('.remain-success').classList.add('active')});
 })();
