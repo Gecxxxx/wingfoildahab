@@ -10,7 +10,7 @@
     <section class="photo-carousel" aria-label="Station photos">
       <div class="photo-carousel__main">
         <div class="photo-carousel__viewport"><div class="photo-carousel__track">
-          ${images.map((image, index) => `<div class="photo-carousel__slide" role="group" aria-label="${index + 1} of ${images.length}"><div class="photo-carousel__image" style="background-image:url('${asset(image)}')"></div></div>`).join('')}
+          ${images.map((image, index) => `<div class="photo-carousel__slide" role="group" aria-label="${index + 1} of ${images.length}"><div class="photo-carousel__image" data-bg="${asset(image)}"${index === 0 ? ` style="background-image:url('${asset(image)}')"` : ''}></div></div>`).join('')}
         </div></div>
         <button class="photo-carousel__arrow photo-carousel__arrow--prev" type="button" aria-label="Previous slide"></button>
         <button class="photo-carousel__arrow photo-carousel__arrow--next" type="button" aria-label="Next slide"></button>
@@ -22,12 +22,14 @@
   let index = 0;
   let timer;
   let startX = null;
-  const render = () => { track.style.transform = `translateX(-${index * 100}%)`; };
+  const load = (position) => { const image = mount.querySelectorAll('.photo-carousel__image')[position]; if (image && !image.style.backgroundImage) image.style.backgroundImage = `url('${image.dataset.bg}')`; };
+  const render = () => { load(index); load((index + 1) % images.length); track.style.transform = `translateX(-${index * 100}%)`; };
   const restart = () => { clearInterval(timer); timer = setInterval(() => { index = (index + 1) % images.length; render(); }, 5000); };
   const move = (direction) => { index = (index + direction + images.length) % images.length; render(); restart(); };
   mount.querySelector('.photo-carousel__arrow--prev').addEventListener('click', () => move(-1));
   mount.querySelector('.photo-carousel__arrow--next').addEventListener('click', () => move(1));
   viewport.addEventListener('pointerdown', (event) => { startX = event.clientX; });
   viewport.addEventListener('pointerup', (event) => { if (startX === null) return; const delta = event.clientX - startX; startX = null; if (Math.abs(delta) > 50) move(delta > 0 ? -1 : 1); });
+  load(1);
   restart();
 })();
