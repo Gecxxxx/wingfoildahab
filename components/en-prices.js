@@ -17,6 +17,7 @@
   const open=index=>{const item=items[index];mount.querySelector('.price-modal-image').style.backgroundImage=`url('${asset(item[0])}')`;mount.querySelector('.price-modal-info h3').textContent=item[1];mount.querySelector('.price-modal-meta').textContent=item[2];mount.querySelector('.price-modal-text').textContent=item[5];overlay.classList.add('active');document.body.style.overflow='hidden'};
   mount.querySelectorAll('[data-price]').forEach(button=>button.addEventListener('click',()=>open(Number(button.dataset.price))));
   mount.querySelectorAll('[data-close],.price-modal-close').forEach(button=>button.addEventListener('click',close));
+  mount.querySelector('.price-modal-content a[href="#contacts"]').addEventListener('click',close);
   overlay.addEventListener('click',event=>{if(event.target===overlay)close()});
   document.addEventListener('keydown',event=>{if(event.key==='Escape')close()});
 })();

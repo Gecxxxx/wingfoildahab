@@ -18,14 +18,14 @@
     `<a href="${href}" class="vf-nav-link ${extra}"${href.startsWith('#') ? ` data-anchor="${href}"` : ''}>${text}</a>`
   ).join('');
   const socials = `
-    <a class="vf-ico" href="https://t.me/vetratoriawingcenter" target="_blank" rel="noopener"><img src="${asset('telegram.png')}" alt="TG"></a>
+    <a class="vf-ico" href="https://t.me/wingfoil_center" target="_blank" rel="noopener"><img src="${asset('telegram.png')}" alt="TG"></a>
     <a class="vf-ico" href="https://wa.me/201151015941" target="_blank" rel="noopener"><img src="${asset('whatsapp.png')}" alt="WA"></a>
     <a class="vf-ico" href="https://www.instagram.com/vetratoriaofficiale/" target="_blank" rel="noopener"><img src="${asset('instagram.png')}" alt="IG"></a>`;
 
   mount.innerHTML = `
     <header id="vf-fixed-menu" class="vf-desk-menu">
       <div class="vf-desk-wrap">
-        <a class="vf-desk-logo" href="${route('en/')}" aria-label="Vetratoria"><img src="${asset('logo.png')}" alt="Vetratoria"></a>
+        <a class="vf-desk-logo" href="${route('')}" aria-label="Vetratoria"><img src="${asset('logo.png')}" alt="Vetratoria"></a>
         <nav class="vf-desk-nav" aria-label="Main navigation"><div class="vf-desk-nav-inner">${links}</div></nav>
         <div class="vf-desk-right">
           <div class="vf-social">${socials}</div>

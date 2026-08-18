@@ -11,8 +11,8 @@
   ];
 
   mount.innerHTML = `
-    <section class="steps-section uc-steps" id="training-path"><div class="steps-container"><h2>Ваш путь к <span class="steps-orange">первому полету</span></h2><div class="steps-grid">${steps.map((step, index) => `<article class="step-card" data-step="${index}" tabindex="0"><div class="step-img"><img src="${asset(step.img)}" alt="${step.title}" loading="lazy"></div><div class="step-info"><span class="step-hint">Подробнее →</span><span class="step-num">${step.num}</span><h3 class="step-title">${step.title}</h3><p class="step-preview">${step.preview}</p></div></article>`).join('')}</div><div class="steps-footer"><a href="#" class="steps-main-btn" data-scroll=".uc-form">Записаться на обучение</a></div></div>
-      <div class="steps-modal-overlay"><div class="steps-modal-content"><button class="steps-modal-close" type="button" aria-label="Закрыть">×</button><div class="steps-modal-image"></div><div class="steps-modal-text"><h3></h3><h4></h4><div class="steps-modal-details"></div><div class="steps-modal-note"></div><ul class="steps-modal-list"></ul><a href="#" class="steps-modal-btn" data-scroll=".uc-form">Забронировать этот этап</a></div></div></div>
+    <section class="steps-section uc-steps" id="training-path"><div class="steps-container"><h2>Ваш путь к <span class="steps-orange">первому полету</span></h2><div class="steps-grid">${steps.map((step, index) => `<article class="step-card" data-step="${index}" tabindex="0"><div class="step-img"><img src="${asset(step.img)}" alt="${step.title}" loading="lazy"></div><div class="step-info"><span class="step-hint">Подробнее →</span><span class="step-num">${step.num}</span><h3 class="step-title">${step.title}</h3><p class="step-preview">${step.preview}</p></div></article>`).join('')}</div><div class="steps-footer"><a href="#" class="steps-main-btn" data-contact-open>Записаться на обучение</a></div></div>
+      <div class="steps-modal-overlay"><div class="steps-modal-content"><button class="steps-modal-close" type="button" aria-label="Закрыть">×</button><div class="steps-modal-image"></div><div class="steps-modal-text"><h3></h3><h4></h4><div class="steps-modal-details"></div><div class="steps-modal-note"></div><ul class="steps-modal-list"></ul><a href="#" class="steps-modal-btn" data-contact-open>Забронировать этот этап</a></div></div></div>
     </section>`;
 
   const overlay = mount.querySelector('.steps-modal-overlay');
@@ -22,5 +22,5 @@
   mount.querySelector('.steps-modal-close').addEventListener('click', close);
   overlay.addEventListener('click', event => { if (event.target === overlay) close(); });
   document.addEventListener('keydown', event => { if (event.key === 'Escape') close(); });
-  mount.querySelectorAll('[data-scroll]').forEach(link => link.addEventListener('click', event => { event.preventDefault(); close(); document.querySelector(link.dataset.scroll)?.scrollIntoView({ behavior: 'smooth' }); }));
+  mount.querySelectorAll('[data-contact-open]').forEach(link => link.addEventListener('click', event => { event.preventDefault(); close(); document.dispatchEvent(new Event('vf:open-contact')); }));
 })();

@@ -17,6 +17,7 @@
   const open=index=>{const step=steps[index];mount.querySelector('.steps-modal-image').style.backgroundImage=`url('${asset(step.img)}')`;mount.querySelector('.steps-modal-text h3').textContent=step.num;mount.querySelector('.steps-modal-text h4').textContent=step.title;mount.querySelector('.steps-modal-details').textContent=step.full;mount.querySelector('.steps-modal-note').textContent=step.note;mount.querySelector('.steps-modal-list').innerHTML=step.skills.map(skill=>`<li>${skill}</li>`).join('');overlay.classList.add('active');document.body.style.overflow='hidden'};
   mount.querySelectorAll('[data-step]').forEach(card=>{card.addEventListener('click',()=>open(Number(card.dataset.step)));card.addEventListener('keydown',event=>{if(event.key==='Enter'||event.key===' ')open(Number(card.dataset.step))})});
   mount.querySelector('.steps-modal-close').addEventListener('click',close);
+  mount.querySelector('.steps-modal-btn').addEventListener('click',close);
   overlay.addEventListener('click',event=>{if(event.target===overlay)close()});
   document.addEventListener('keydown',event=>{if(event.key==='Escape')close()});
 })();

@@ -16,7 +16,7 @@
   mount.innerHTML = `
     <section class="team-section uc-team" id="team">
       <div class="team-container">
-        <div class="team-header team-fade-up team-delay-1"><h2>Наша <span class="team-orange">Команда</span></h2><p>В нашей школе работают опытные инструктора, которые уже научили вингфойлингу 1500+ людей!</p></div>
+        <div class="team-header team-fade-up team-delay-1"><h2>Наша <span class="team-orange">Команда</span></h2><p>В нашей школе работают опытные инструкторы, которые уже научили вингфойлингу более 1500 человек!</p></div>
         <div class="team-grid">
           ${members.map(([image, name, role, description, languages, delay]) => `
             <article class="team-card team-fade-up ${delay}">
@@ -29,13 +29,13 @@
             </article>
           `).join('')}
         </div>
-        <div class="team-footer team-fade-up team-delay-4"><a href="#" class="team-btn" data-scroll=".uc-form">Записаться на урок</a></div>
+        <div class="team-footer team-fade-up team-delay-4"><a href="#" class="team-btn" data-contact-open>Записаться на урок</a></div>
       </div>
     </section>
   `;
 
-  mount.querySelector('[data-scroll]').addEventListener('click', (event) => {
+  mount.querySelector('[data-contact-open]').addEventListener('click', (event) => {
     event.preventDefault();
-    document.querySelector(event.currentTarget.dataset.scroll)?.scrollIntoView({ behavior: 'smooth' });
+    document.dispatchEvent(new Event('vf:open-contact'));
   });
 })();

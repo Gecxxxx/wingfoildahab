@@ -14,7 +14,7 @@
           <div class="da-card"><h3>01. ЛАГУНА</h3><p>Идеально для начинающих. Песчаная коса обеспечивает полную безопасность, а ровная вода и обширные отмели — лучший старт для первых «полетов».</p></div>
           <div class="da-card"><h3>02. СКОРОСТНАЯ ЗОНА</h3><p>Зона с самым стабильным ветром для скоростного катания. Ровная вода переходит в чоп, а безопасность обеспечивает постоянное наблюдение и «спасательный остров».</p></div>
           <div class="da-card"><h3>03. ВОЛНОВАЯ ЗОНА</h3><p>Открытое море за рифом с пологими волнами до 3 м. Идеально для вейв-фойлинга и прыжков. Для полной безопасности выдаем спасательные телефоны.</p></div>
-          <div class="da-action-wrapper"><a href="#" class="da-main-btn" data-scroll=".uc-form">Связаться с нами</a></div>
+          <div class="da-action-wrapper"><a href="#" class="da-main-btn" data-contact-open>Связаться с нами</a></div>
         </div>
         <div class="da-right">
           <div class="da-interactive-zone">
@@ -40,8 +40,8 @@
     buttons.forEach((item, current) => item.classList.toggle('active', current === index));
   }));
 
-  mount.querySelector('[data-scroll]').addEventListener('click', (event) => {
+  mount.querySelector('[data-contact-open]').addEventListener('click', (event) => {
     event.preventDefault();
-    document.querySelector(event.currentTarget.dataset.scroll)?.scrollIntoView({ behavior: 'smooth' });
+    document.dispatchEvent(new Event('vf:open-contact'));
   });
 })();

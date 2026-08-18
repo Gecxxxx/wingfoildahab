@@ -7,7 +7,7 @@
   const features = [
     ['boat.png', 'Boat', 'Инструктор с лодкой', 'Используем лодку во время уроков. Начнем занятие в наиболее подходящей ветровой части акватории для вашего комфорта.'],
     ['radios.png', 'Radios', 'Рации с микрофоном', "Мы используем BB-Talkin' для легкой связи с инструктором в режиме реального времени. Вы слышите советы прямо во время движения."],
-    ['safety.png', 'Safety', 'Практика на воде', 'Под чутким наблюдением вы сможете легко освоить вингфойлинг. За вашей безопасностью присматривают 3 спасательные лодки.'],
+    ['safety.png', 'Safety', 'Практика на воде', 'Под чутким наблюдением вы сможете легко освоить вингфойлинг. За вашей безопасностью присматривают 4 спасательных катера.'],
     ['gift.png', 'Gift', 'Час проката в подарок', 'После первого урока вы получите комплект «Доска с швертом + надувное крыло» на 1 час проката совершенно бесплатно.'],
   ];
 
@@ -21,7 +21,7 @@
           `).join('')}
         </div>
         <div class="fly-actions">
-          <a href="#" class="fly-btn fly-btn--main" data-scroll=".uc-form">Написать нам</a>
+          <a href="#" class="fly-btn fly-btn--main" data-contact-open>Написать нам</a>
           <a href="#" class="fly-btn fly-btn--sub" data-scroll=".uc-steps">Этапы обучения</a>
         </div>
       </div>
@@ -32,4 +32,8 @@
     event.preventDefault();
     document.querySelector(link.dataset.scroll)?.scrollIntoView({ behavior: 'smooth' });
   }));
+  mount.querySelector('[data-contact-open]').addEventListener('click', (event) => {
+    event.preventDefault();
+    document.dispatchEvent(new Event('vf:open-contact'));
+  });
 })();
