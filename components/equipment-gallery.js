@@ -1,0 +1,22 @@
+(() => {
+  const mount=document.getElementById('vf-equipment-gallery-root');if(!mount)return;
+  const root=new URL('../',document.currentScript.src);
+  const asset=index=>new URL(`assets/equipment-gallery/slide-${String(index+1).padStart(2,'0')}.webp`,root).href;
+  const total=12;
+  mount.innerHTML=`<section class="equipment-gallery" aria-label="Фотографии снаряжения"><div class="equipment-gallery__viewport"><div class="equipment-gallery__track">${Array.from({length:total},(_,index)=>`<div class="equipment-gallery__slide" role="group" aria-label="${index+1} из ${total}"><div class="equipment-gallery__image" data-bg="${asset(index)}"${index===0?` style="background-image:url('${asset(index)}')"`:''}></div></div>`).join('')}</div></div><button class="equipment-gallery__arrow equipment-gallery__prev" type="button" aria-label="Предыдущий слайд"></button><button class="equipment-gallery__arrow equipment-gallery__next" type="button" aria-label="Следующий слайд"></button><div class="equipment-gallery__dots">${Array.from({length:total},(_,index)=>`<button class="equipment-gallery__dot${index===0?' active':''}" type="button" data-slide="${index}" aria-label="Перейти к слайду ${index+1}"></button>`).join('')}</div></section>`;
+  const track=mount.querySelector('.equipment-gallery__track');
+  const images=[...mount.querySelectorAll('.equipment-gallery__image')];
+  const dots=[...mount.querySelectorAll('.equipment-gallery__dot')];
+  let index=0,timer,startX=null;
+  const load=position=>{const image=images[position];if(image&&!image.style.backgroundImage)image.style.backgroundImage=`url('${image.dataset.bg}')`};
+  const render=()=>{load(index);load((index+1)%total);const mobile=innerWidth<=900;track.style.transform=mobile?`translateX(-${index*100}vw)`:`translateX(calc(50vw - 480px - ${index*960}px))`;dots.forEach((dot,current)=>dot.classList.toggle('active',current===index))};
+  const restart=()=>{clearInterval(timer);timer=setInterval(()=>{index=(index+1)%total;render()},5000)};
+  const move=direction=>{index=(index+direction+total)%total;render();restart()};
+  mount.querySelector('.equipment-gallery__prev').addEventListener('click',()=>move(-1));
+  mount.querySelector('.equipment-gallery__next').addEventListener('click',()=>move(1));
+  dots.forEach(dot=>dot.addEventListener('click',()=>{index=Number(dot.dataset.slide);render();restart()}));
+  mount.querySelector('.equipment-gallery__viewport').addEventListener('pointerdown',event=>{startX=event.clientX});
+  mount.querySelector('.equipment-gallery__viewport').addEventListener('pointerup',event=>{if(startX===null)return;const delta=event.clientX-startX;startX=null;if(Math.abs(delta)>50)move(delta>0?-1:1)});
+  addEventListener('resize',render);
+  load(1);restart();
+})();

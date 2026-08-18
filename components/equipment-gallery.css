@@ -1,0 +1,14 @@
+.equipment-gallery,.equipment-gallery *{box-sizing:border-box}
+.equipment-gallery{position:relative;height:650px;padding-top:45px;overflow:hidden;background:#000;font-family:"Raleway",sans-serif}
+.equipment-gallery__viewport{position:relative;width:100%;height:550px;overflow:hidden}
+.equipment-gallery__track{display:flex;width:max-content;height:550px;transform:translateX(calc(50vw - 480px));transition:transform .55s cubic-bezier(.4,0,.2,1);will-change:transform}
+.equipment-gallery__slide{width:960px;height:550px;padding:0 50px;flex:0 0 960px}
+.equipment-gallery__image{width:100%;height:100%;background-position:center;background-size:cover;background-repeat:no-repeat}
+.equipment-gallery__arrow{position:absolute;z-index:2;top:45px;width:120px;height:550px;padding:0;border:0;background:transparent;cursor:pointer}
+.equipment-gallery__arrow::after{position:absolute;top:50%;width:16px;height:30px;margin-top:-15px;background:url('../assets/carousel/arrow.svg') center/contain no-repeat;content:""}
+.equipment-gallery__prev{left:max(0px,calc(50% - 500px))}.equipment-gallery__prev::after{left:24px;transform:rotate(180deg)}
+.equipment-gallery__next{right:max(0px,calc(50% - 500px))}.equipment-gallery__next::after{right:24px}
+.equipment-gallery__dots{height:55px;display:flex;align-items:center;justify-content:center;gap:10px}
+.equipment-gallery__dot{width:8px;height:8px;padding:0;border:1px solid rgba(255,255,255,.7);border-radius:50%;background:transparent;cursor:pointer;transition:.25s}
+.equipment-gallery__dot.active{background:#fff;transform:scale(1.15)}
+@media(max-width:900px){.equipment-gallery{height:520px;padding-top:30px}.equipment-gallery__viewport,.equipment-gallery__track{height:430px}.equipment-gallery__track{transform:translateX(0)}.equipment-gallery__slide{width:100vw;height:430px;padding:0 15px;flex-basis:100vw}.equipment-gallery__arrow{top:30px;width:65px;height:430px}.equipment-gallery__prev{left:0}.equipment-gallery__next{right:0}.equipment-gallery__prev::after{left:20px}.equipment-gallery__next::after{right:20px}}
