@@ -13,7 +13,7 @@
 .en-hero-title span{display:block}
 .en-hero-desc{margin:10px 0 0;font-size:19px;font-weight:400;line-height:1.5;color:#fff}
 .en-hero-right{display:flex;flex-direction:column;gap:30px}
-.en-hero-features-title{margin:0 0 24px;color:var(--en-orange);font-size:22px;font-weight:600;line-height:1.5}
+.en-hero-features-title{margin:0 0 30px;color:var(--en-orange);font-size:22px;font-weight:600;line-height:1.5}
 .en-hero-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin:0 0 10px;padding:0 0 0 20px}
 .en-hero-list li{font-size:17px;line-height:25.5px;color:#fff}
 .en-hero-buttons{display:grid;grid-template-columns:1fr 1fr;gap:12px}
