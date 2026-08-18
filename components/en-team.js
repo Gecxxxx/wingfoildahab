@@ -14,6 +14,6 @@
   mount.innerHTML = `<section class="team-section uc-team" id="team"><div class="team-container">
     <div class="team-header team-fade-up team-delay-1"><h2>Our <span class="team-orange">Team</span></h2><p>Our school is powered by experienced instructors who are in love with the sea and have already taught wingfoiling to more than 1,500 people!</p></div>
     <div class="team-grid">${members.map(([image,name,role,description,languages,delay]) => `<article class="team-card team-fade-up ${delay}"><div class="team-photo-wrap"><img src="${asset(image)}" loading="lazy" decoding="async" alt="${name}"></div><div class="team-name">${name}</div><div class="team-role">${role}</div><div class="team-line"></div><div class="team-desc">${description}</div><div class="team-langs"><span>Languages:</span> ${languages}</div></article>`).join('')}</div>
-    <div class="team-footer team-fade-up team-delay-4"><a href="#contacts" class="team-btn">Book a Lesson</a></div>
+    <div class="team-footer team-fade-up team-delay-4"><a href="#booking-form-en" class="team-btn">Book a Lesson</a></div>
   </div></section>`;
 })();

@@ -29,13 +29,9 @@
             </article>
           `).join('')}
         </div>
-        <div class="team-footer team-fade-up team-delay-4"><a href="#" class="team-btn" data-contact-open>Записаться на урок</a></div>
+        <div class="team-footer team-fade-up team-delay-4"><a href="#booking-form" class="team-btn">Записаться на урок</a></div>
       </div>
     </section>
   `;
 
-  mount.querySelector('[data-contact-open]').addEventListener('click', (event) => {
-    event.preventDefault();
-    document.dispatchEvent(new Event('vf:open-contact'));
-  });
 })();

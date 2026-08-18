@@ -29,7 +29,7 @@
           <p>Discover the world of new water sports, feel the inexpressible <b>feeling of flying on wingfoil and get charged with vivid emotions in the best wind spot — Dahab, together with our wingfoil center!</b></p>
           <div class="dahab-actions">
             <a href="#aquatory" class="dahab-btn dahab-btn--outline">About the Spot</a>
-            <a href="#contacts" class="dahab-btn dahab-btn--fill">Contact Us</a>
+            <a href="#booking-form-en" class="dahab-btn dahab-btn--fill">Contact Us</a>
           </div>
         </div>
       </div>

@@ -30,7 +30,7 @@
           <p>Откройте для себя мир нового водного спорта, ощутите непередаваемое <b>чувство полета и зарядитесь яркими эмоциями в лучшем ветровом споте – Дахаб, вместе с нашей станцией!</b></p>
           <div class="dahab-actions">
             <a href="#" class="dahab-btn dahab-btn--outline" data-scroll=".uc-aquatory">Наша акватория</a>
-            <a href="#" class="dahab-btn dahab-btn--fill" data-contact-open>Контакты</a>
+            <a href="#booking-form" class="dahab-btn dahab-btn--fill">Контакты</a>
           </div>
         </div>
       </div>
@@ -42,9 +42,5 @@
       event.preventDefault();
       document.querySelector(link.dataset.scroll)?.scrollIntoView({ behavior: 'smooth' });
     });
-  });
-  mount.querySelector('[data-contact-open]').addEventListener('click', (event) => {
-    event.preventDefault();
-    document.dispatchEvent(new Event('vf:open-contact'));
   });
 })();

@@ -9,7 +9,7 @@
     <div class="da-card"><h3>01. THE LAGOON</h3><p>Shallow water with a flat surface. Protected by a sandbar, it's the perfect training ground for your first “flights” on the foil.</p></div>
     <div class="da-card"><h3>02. SPEED ZONE</h3><p>Open space with smooth water and consistent wind. This is where riders perfect their speed and advanced jibes.</p></div>
     <div class="da-card"><h3>03. WAVE ZONE</h3><p>Venture beyond the reef to long, rolling swells. The ultimate territory for true wing-surfing in the open sea.</p></div>
-    <div class="da-action-wrapper"><a href="#contacts" class="da-main-btn">Contact Us</a></div>
+    <div class="da-action-wrapper"><a href="#booking-form-en" class="da-main-btn">Contact Us</a></div>
   </div><div class="da-right"><div class="da-interactive-zone"><div class="da-screen">
     <div class="da-img-item active"><img src="${asset('satellite.jpg')}" loading="lazy" decoding="async" alt="Satellite view"></div>
     <div class="da-img-item"><img data-src="${asset('map.jpg')}" loading="lazy" decoding="async" alt="Spot map"></div>

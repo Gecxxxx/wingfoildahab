@@ -12,6 +12,6 @@
   mount.innerHTML = `<section class="fly-section" id="fly-teaching"><div class="fly-container">
     <h2 class="fly-title">We will teach you <br><span class="fly-orange">to fly!</span></h2>
     <div class="fly-grid">${features.map(([image,alt,title,text]) => `<article class="fly-item"><img src="${asset(image)}" loading="lazy" decoding="async" alt="${alt}" class="fly-icon"><div class="fly-item-title">${title}</div><p class="fly-item-text">${text}</p></article>`).join('')}</div>
-    <div class="fly-actions"><a href="#contacts" class="fly-btn fly-btn--main">Write to us</a><a href="#learning-stages" class="fly-btn fly-btn--sub">Stages of training</a></div>
+    <div class="fly-actions"><a href="#booking-form-en" class="fly-btn fly-btn--main">Write to us</a><a href="#learning-stages" class="fly-btn fly-btn--sub">Stages of training</a></div>
   </div></section>`;
 })();

@@ -21,7 +21,7 @@
           `).join('')}
         </div>
         <div class="fly-actions">
-          <a href="#" class="fly-btn fly-btn--main" data-contact-open>Написать нам</a>
+          <a href="#booking-form" class="fly-btn fly-btn--main">Написать нам</a>
           <a href="#" class="fly-btn fly-btn--sub" data-scroll=".uc-steps">Этапы обучения</a>
         </div>
       </div>
@@ -32,8 +32,4 @@
     event.preventDefault();
     document.querySelector(link.dataset.scroll)?.scrollIntoView({ behavior: 'smooth' });
   }));
-  mount.querySelector('[data-contact-open]').addEventListener('click', (event) => {
-    event.preventDefault();
-    document.dispatchEvent(new Event('vf:open-contact'));
-  });
 })();
