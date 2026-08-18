@@ -1,0 +1,22 @@
+(() => {
+  const mount = document.getElementById('vf-en-steps-root');
+  if (!mount) return;
+  const root = new URL('../', document.currentScript.src);
+  const asset = (name) => new URL(`assets/steps/${name}`, root).href;
+  const steps = [
+    { num:'Step 01', title:'Basics & Control', preview:'Master wing mechanics and wind reading on a stable board.', img:'step-01.jpg', full:'Learn to control the wing on a stable daggerboard without a hydrofoil. This foundation helps you understand wind power and board direction.', skills:['Holding the wing and controlling its angle','Speed and power control','Turning and riding upwind','Returning safely to the station'], note:'Goal: confident wing control. Usually 1–2 lessons.' },
+    { num:'Step 02', title:'First Take-offs', preview:'Towing sessions behind a boat to focus on balance and flight.', img:'step-02.jpg', full:'Master the hydrofoil while holding a tow rope behind the boat. With no wing to manage, you can focus completely on balance and flight.', skills:['Taking off on the foil','Controlling flight height','Stable board control'], note:'Goal: controlled take-off and flight. Usually 30–90 minutes behind the boat.' },
+    { num:'Step 03', title:'Full Connection', preview:'Combining wing and foil. Learn to fly consistently and stay upwind.', img:'step-03.webp', full:'Combine all your skills: a hydrofoil under your feet and wind power in your hands. This is the moment of your first true wingfoil flight.', skills:['Taking off with the wing','Stable flight and height control','Speed control','Returning to the starting point'], note:'Stable flight usually takes 1–3 coached lessons followed by practice.' },
+    { num:'Step 04', title:'Progression & Tricks', preview:'Master jibes, tacks, and riding in open water and waves.', img:'step-04.jpg', full:'Once you can fly confidently, progress to smooth transitions, advanced maneuvers and your first open-sea wave sessions.', skills:['Jibes and tacks','Maintaining height through turns','Wave starts and riding technique'], note:'Goal: foil turns without losing speed and confident open-water riding.' },
+  ];
+  mount.innerHTML = `<section class="steps-section uc-steps" id="learning-stages"><div class="steps-container"><h2>Your path to the <span class="steps-orange">first flight</span></h2><div class="steps-grid">${steps.map((step,index)=>`<article class="step-card" data-step="${index}" tabindex="0"><div class="step-img"><img src="${asset(step.img)}" alt="${step.title}" loading="lazy" decoding="async"></div><div class="step-info"><span class="step-hint">Click for details →</span><span class="step-num">${step.num}</span><h3 class="step-title">${step.title}</h3><p class="step-preview">${step.preview}</p></div></article>`).join('')}</div><div class="steps-footer"><a href="#contacts" class="steps-main-btn">Contact Us</a></div></div>
+    <div class="steps-modal-overlay"><div class="steps-modal-content"><button class="steps-modal-close" type="button" aria-label="Close">×</button><div class="steps-modal-image"></div><div class="steps-modal-text"><h3></h3><h4></h4><div class="steps-modal-details"></div><div class="steps-modal-note"></div><ul class="steps-modal-list"></ul><a href="#contacts" class="steps-modal-btn">Book this stage</a></div></div></div>
+  </section>`;
+  const overlay=mount.querySelector('.steps-modal-overlay');
+  const close=()=>{overlay.classList.remove('active');document.body.style.overflow=''};
+  const open=index=>{const step=steps[index];mount.querySelector('.steps-modal-image').style.backgroundImage=`url('${asset(step.img)}')`;mount.querySelector('.steps-modal-text h3').textContent=step.num;mount.querySelector('.steps-modal-text h4').textContent=step.title;mount.querySelector('.steps-modal-details').textContent=step.full;mount.querySelector('.steps-modal-note').textContent=step.note;mount.querySelector('.steps-modal-list').innerHTML=step.skills.map(skill=>`<li>${skill}</li>`).join('');overlay.classList.add('active');document.body.style.overflow='hidden'};
+  mount.querySelectorAll('[data-step]').forEach(card=>{card.addEventListener('click',()=>open(Number(card.dataset.step)));card.addEventListener('keydown',event=>{if(event.key==='Enter'||event.key===' ')open(Number(card.dataset.step))})});
+  mount.querySelector('.steps-modal-close').addEventListener('click',close);
+  overlay.addEventListener('click',event=>{if(event.target===overlay)close()});
+  document.addEventListener('keydown',event=>{if(event.key==='Escape')close()});
+})();
