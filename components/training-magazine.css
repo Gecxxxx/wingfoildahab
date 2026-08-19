@@ -1,0 +1,56 @@
+.training-body{max-width:1240px}
+.training-section{position:relative;padding:76px 70px;background:#fff;border-top:8px solid #f2672f;box-shadow:0 20px 60px rgba(30,24,16,.07)}
+.training-section+.training-section{margin-top:42px}
+.training-copy{position:relative;z-index:1}
+.training-text strong,.training-text h3{color:#f2672f}
+.magazine-media{display:grid;gap:12px;margin:56px 0 0}
+.magazine-media img{display:block;width:100%;height:100%;min-height:0;object-fit:cover;background:#e7e2da}
+.training-section--intro-spread{display:grid;grid-template-columns:1.05fr .95fr;gap:58px;align-items:start}
+.training-section--intro-spread .magazine-media{grid-template-rows:1fr 1fr;margin:0}
+.training-section--intro-spread .magazine-media img{height:320px}
+.training-section--school-panorama .magazine-media{grid-template-columns:1.35fr .65fr}
+.training-section--school-panorama .magazine-media img{height:390px}
+.training-section--feature-portrait,.training-section--feature-portrait.reverse{display:grid;grid-template-columns:.82fr 1.18fr;gap:64px;align-items:center}
+.training-section--feature-portrait.reverse{grid-template-columns:1.18fr .82fr}
+.training-section--feature-portrait.reverse .training-copy{order:1}.training-section--feature-portrait.reverse .magazine-media{order:2}
+.training-section--feature-portrait .magazine-media{margin:0;order:-1}
+.training-section--feature-portrait .magazine-media img{height:680px}
+.training-section--compact-pair .magazine-media{grid-template-columns:repeat(2,1fr);max-width:860px;margin-left:auto}
+.training-section--compact-pair .magazine-media img{height:370px}
+.training-section--compact-single .magazine-media{max-width:780px;margin-left:auto}
+.training-section--compact-single .magazine-media img{height:440px}
+.training-section--feature-wide{padding-top:96px;padding-bottom:96px;background:#151515;color:#fff;border-top-width:12px}
+.training-section--feature-wide .training-text{color:#d8d5cf}.training-section--feature-wide .training-copy h2{color:#fff}
+.training-section--timeline-strip .magazine-media{grid-template-columns:repeat(3,1fr)}
+.training-section--timeline-strip .magazine-media img{height:330px}
+.training-section--stage-split,.training-section--stage-split.reverse{display:grid;grid-template-columns:1.12fr .88fr;gap:60px;align-items:start}
+.training-section--stage-split.reverse{grid-template-columns:.88fr 1.12fr}
+.training-section--stage-split.reverse .training-copy{order:2}
+.training-section--stage-split .magazine-media{grid-template-columns:1fr;margin:0}
+.training-section--stage-split .magazine-media img{height:315px}
+.training-section--stage-split .magazine-media img:only-child{height:620px}
+.training-section--stage-split .magazine-media img:nth-child(3),.training-section--stage-split .magazine-media img:nth-child(4){height:240px}
+.training-section--safety-spread .magazine-media{grid-template-columns:.72fr 1.28fr;grid-template-rows:240px 240px}
+.training-section--safety-spread .magazine-media img:first-child{grid-row:1/3}
+.training-section--contact-spread{background:#f2672f;color:#151515;border-color:#151515}
+.training-section--contact-spread .training-text{color:#23201d}
+.training-section--contact-spread .magazine-media{grid-template-columns:1fr 1fr .55fr;grid-template-rows:270px 360px}
+.training-section--contact-spread .magazine-media img:nth-child(4){grid-column:1/4;width:100%;object-position:center 55%}
+.training-section--contact-spread .magazine-media img:nth-child(3){object-fit:contain;background:#fff}
+.training-section--text-only{box-shadow:none;background:transparent;border-top:1px solid #bcb8af;padding-left:0;padding-right:0}
+@media(max-width:900px){
+  .training-section{padding:48px 34px}
+  .training-section--intro-spread,.training-section--feature-portrait,.training-section--feature-portrait.reverse,.training-section--stage-split,.training-section--stage-split.reverse{grid-template-columns:1fr;gap:38px}
+  .training-section--feature-portrait.reverse .training-copy,.training-section--stage-split.reverse .training-copy{order:initial}
+  .training-section--feature-portrait .magazine-media{order:initial}
+  .training-section--feature-portrait .magazine-media img{height:520px}
+}
+@media(max-width:620px){
+  .training-section{margin-left:-16px;margin-right:-16px;padding:38px 20px;border-top-width:6px;box-shadow:none}
+  .training-section+.training-section{margin-top:26px}
+  .training-section--text-only{margin-left:0;margin-right:0;padding-left:0;padding-right:0}
+  .training-section--intro-spread .magazine-media,.training-section--school-panorama .magazine-media,.training-section--compact-pair .magazine-media,.training-section--timeline-strip .magazine-media,.training-section--safety-spread .magazine-media,.training-section--contact-spread .magazine-media{grid-template-columns:1fr;grid-template-rows:auto}
+  .training-section--intro-spread .magazine-media img,.training-section--school-panorama .magazine-media img,.training-section--compact-pair .magazine-media img,.training-section--compact-single .magazine-media img,.training-section--timeline-strip .magazine-media img,.training-section--stage-split .magazine-media img,.training-section--stage-split .magazine-media img:nth-child(3),.training-section--stage-split .magazine-media img:nth-child(4),.training-section--feature-portrait .magazine-media img{height:auto;max-height:520px}
+  .training-section--safety-spread .magazine-media img:first-child{grid-row:auto}
+  .training-section--contact-spread .magazine-media img:nth-child(4){grid-column:auto}
+}
