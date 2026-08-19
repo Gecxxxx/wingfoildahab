@@ -1,0 +1,40 @@
+.racing-hero{min-height:780px}
+.racing-hero::before{content:"WORLD CUP";position:absolute;right:-.03em;bottom:-.08em;color:rgba(255,255,255,.055);font-size:clamp(100px,18vw,280px);font-weight:800;line-height:.8;letter-spacing:-.08em;white-space:nowrap;z-index:2}
+.racing-hero__image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 35%;filter:saturate(.85);opacity:.48}
+.racing-hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,5,5,.92),rgba(5,5,5,.55) 60%,rgba(5,5,5,.28))}
+.racing-hero__content{position:relative;z-index:3;max-width:1120px}
+.racing-hero h1{max-width:1000px;font-size:clamp(48px,7.2vw,104px);line-height:.91}
+.racing-content{width:min(1120px,calc(100% - 48px))}
+.racing-intro{margin:105px 0 80px}
+.racing-intro p{font-size:clamp(22px,2.7vw,34px);line-height:1.38}
+.racing-feature{margin:80px 0}
+.racing-feature img{display:block;width:100%;max-height:720px;object-fit:cover}
+.racing-section{margin:115px 0}
+.racing-section__eyebrow{margin:0 0 18px;color:#f2672f;font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+.racing-section h2{max-width:950px;margin:0 0 44px;font-size:clamp(42px,6vw,76px);font-weight:500;line-height:1.02;letter-spacing:-.05em}
+.racing-copy{max-width:860px;margin-left:auto}
+.racing-copy p,.racing-copy li{color:#383632;font-size:18px;line-height:1.75}
+.racing-copy p{margin:0 0 24px}
+.racing-copy ul{padding-left:22px}
+.racing-copy a{color:#d95220;text-decoration-thickness:1px;text-underline-offset:4px}
+.racing-quote{margin:90px 0;padding:55px 65px;background:#0b0b0b;color:#fff}
+.racing-quote p{max-width:900px;margin:0;font-size:clamp(29px,4.2vw,54px);font-weight:400;line-height:1.15;letter-spacing:-.03em}
+.racing-gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin:80px calc(50% - 50vw);padding:38px max(32px,calc((100vw - 1340px)/2));background:#111}
+.racing-gallery img{display:block;width:100%;height:100%;min-height:300px;max-height:520px;object-fit:cover}
+.racing-gallery--two{grid-template-columns:repeat(2,minmax(0,1fr))}
+.racing-gallery--five img:first-child{grid-column:span 2}
+.racing-disciplines{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:48px}
+.racing-discipline{padding:36px;background:#ebe8e1}
+.racing-discipline span{color:#f2672f;font-size:12px;font-weight:700;letter-spacing:.14em}
+.racing-discipline h3{margin:12px 0 16px;font-size:30px;font-weight:500}
+.racing-discipline p{margin:0;color:#4a4742;font-size:16px;line-height:1.65}
+.racing-sources{margin:90px 0;padding-top:35px;border-top:1px solid #c8c4bb;color:#666;font-size:14px;line-height:1.8}
+.racing-sources a{color:#333}
+@media(max-width:760px){
+  .racing-hero{min-height:680px}.racing-hero h1{font-size:48px}.racing-content{width:calc(100% - 32px)}
+  .racing-intro{margin:70px 0 55px}.racing-section{margin:78px 0}.racing-section h2{font-size:42px;margin-bottom:30px}
+  .racing-copy p,.racing-copy li{font-size:17px}.racing-quote{margin:65px -16px;padding:42px 24px}
+  .racing-gallery,.racing-gallery--two{grid-template-columns:1fr;margin:60px -16px;padding:16px;gap:16px}
+  .racing-gallery--five img:first-child{grid-column:auto}.racing-gallery img{min-height:0;max-height:none;aspect-ratio:4/3}
+  .racing-disciplines{grid-template-columns:1fr}.racing-discipline{padding:28px 24px}
+}

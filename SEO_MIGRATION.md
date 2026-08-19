@@ -20,7 +20,8 @@
 | `/why-bb-talkin-en` | Restored as a code-native article |
 | `/history-of-wingfoil` | Restored as a code-native article |
 | `/history-of-wingfoil-en` | Restored as a code-native article |
-| Five remaining article URLs | Temporarily removed; return 404 until rebuilt |
+| `/wingfoil-racing-freestyle` | Restored as a code-native article |
+| Four remaining article URLs | Temporarily removed; return 404 until rebuilt |
 | Blank, test and unrelated pages | 404; do not include in sitemap |
 
 ## Domain cutover
