@@ -13,6 +13,7 @@ for (const entry of [
   "organizers",
   "organizers-ru",
   "why-bb-talkin",
+  "why-bb-talkin-en",
   "robots.txt",
   "sitemap.xml",
   "_redirects",
