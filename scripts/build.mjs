@@ -19,6 +19,7 @@ for (const entry of [
   "wingfoil-racing-freestyle",
   "wingfoil-racing-freestyle-en",
   "wingfoil-for-beginners",
+  "wingfoil-for-beginners-en",
   "robots.txt",
   "sitemap.xml",
   "_redirects",
