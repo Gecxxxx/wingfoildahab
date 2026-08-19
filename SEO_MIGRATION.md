@@ -16,7 +16,7 @@
 | `/organizers-ru` | `/organizers-ru/` |
 | `/page62420279.html` | `/organizers-ru/` (301) |
 | `/wingfoil_courses` | `/ru/#classes-packages` (301) |
-| Nine article URLs | Preserved unchanged |
+| Nine article URLs | Temporarily removed; return 404 until rebuilt |
 | Blank, test and unrelated pages | 404; do not include in sitemap |
 
 ## Domain cutover
