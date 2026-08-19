@@ -20,6 +20,7 @@ for (const entry of [
   "wingfoil-racing-freestyle-en",
   "wingfoil-for-beginners",
   "wingfoil-for-beginners-en",
+  "kite-wingfoil-or-windsurf",
   "robots.txt",
   "sitemap.xml",
   "_redirects",

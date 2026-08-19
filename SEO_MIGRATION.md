@@ -24,7 +24,7 @@
 | `/wingfoil-racing-freestyle-en` | Restored as a code-native article |
 | `/wingfoil-for-beginners` | Restored as a code-native article |
 | `/wingfoil-for-beginners-en` | Restored as a code-native article |
-| One remaining article URL | Temporarily removed; returns 404 until rebuilt |
+| `/kite-wingfoil-or-windsurf` | Restored as a code-native article |
 | Blank, test and unrelated pages | 404; do not include in sitemap |
 
 ## Domain cutover
