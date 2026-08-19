@@ -27,6 +27,7 @@
 | `/kite-wingfoil-or-windsurf` | Restored as a code-native article |
 | `/kite-wingfoil-or-windsurf-en` | Restored as a code-native article |
 | `/why-dahab` | Restored as a code-native article |
+| `/why-dahab-en` | Restored as a code-native article |
 | Blank, test and unrelated pages | 404; do not include in sitemap |
 
 ## Domain cutover

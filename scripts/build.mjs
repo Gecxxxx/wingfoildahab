@@ -23,6 +23,7 @@ for (const entry of [
   "kite-wingfoil-or-windsurf",
   "kite-wingfoil-or-windsurf-en",
   "why-dahab",
+  "why-dahab-en",
   "robots.txt",
   "sitemap.xml",
   "_redirects",
