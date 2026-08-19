@@ -15,6 +15,7 @@ for (const entry of [
   "why-bb-talkin",
   "why-bb-talkin-en",
   "history-of-wingfoil",
+  "history-of-wingfoil-en",
   "robots.txt",
   "sitemap.xml",
   "_redirects",
