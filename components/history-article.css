@@ -1,0 +1,62 @@
+.history-hero::before{content:"1960";right:-.02em;bottom:-.15em;font-size:clamp(180px,31vw,470px);letter-spacing:-.08em}
+.history-hero__image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.38;filter:saturate(.85)}
+.history-hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,8,8,.88) 0%,rgba(8,8,8,.46) 60%,rgba(8,8,8,.3) 100%)}
+.history-hero__content,.history-hero__glow{z-index:2}
+.history-content{width:min(1120px,calc(100% - 48px))}
+.history-timeline{position:relative;margin:110px 0}
+.history-timeline--continued{margin-top:0}
+.history-timeline::before{content:"";position:absolute;top:0;bottom:0;left:179px;width:1px;background:#c8c4bb}
+.history-chapter{display:grid;grid-template-columns:150px 1fr;gap:60px;padding:0 0 100px}
+.history-chapter:last-child{padding-bottom:0}
+.history-date{position:relative;padding-top:8px;text-align:right}
+.history-date::after{content:"";position:absolute;width:11px;height:11px;right:-35.5px;top:16px;border-radius:50%;background:#f2672f;box-shadow:0 0 0 7px #f3f1ec}
+.history-date strong{display:block;color:#f2672f;font-size:21px;line-height:1}
+.history-date span{display:block;margin-top:10px;color:#777;font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase}
+.history-chapter__body h2{max-width:800px;margin:0 0 28px;font-size:clamp(36px,5vw,60px);font-weight:500;line-height:1.08;letter-spacing:-.04em}
+.history-chapter__body p,.history-chapter__body li{max-width:790px;color:#3b3935;font-size:18px}
+.history-chapter__body p{margin:0 0 20px}
+.history-chapter__body ul{margin:28px 0 0;padding:0;list-style:none}
+.history-chapter__body li{position:relative;margin:0 0 20px;padding-left:25px}
+.history-chapter__body li::before{content:"";position:absolute;left:0;top:.7em;width:7px;height:7px;border-radius:50%;background:#f2672f}
+.history-video{margin:110px 0}
+.history-video__frame{position:relative;padding-top:56.25%;overflow:hidden;background:#111}
+.history-video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.history-video figcaption{margin-top:12px;color:#777;font-size:13px;letter-spacing:.04em}
+.history-gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;margin:90px calc(50% - 50vw);padding:34px max(32px,calc((100vw - 1340px)/2));background:#111}
+.history-gallery img{display:block;width:100%;aspect-ratio:1/1;object-fit:cover}
+.history-gallery--archive{margin-top:-20px}
+.history-gallery--dahab{margin-top:0;margin-bottom:100px}
+.history-wide-photo{margin:0 calc(50% - 50vw);background:#111;padding:70px max(32px,calc((100vw - 1340px)/2))}
+.history-wide-photo img{display:block;width:100%;max-height:720px;object-fit:cover}
+.history-station{display:grid;grid-template-columns:220px 1fr;gap:65px;margin:120px 0 0;padding:75px 65px;background:#0b0b0b;color:#fff}
+.history-station__year{color:#f2672f;font-size:70px;font-weight:300;line-height:1}
+.history-station h2{max-width:750px;margin:0 0 28px;font-size:clamp(36px,5vw,58px);font-weight:500;line-height:1.08;letter-spacing:-.04em}
+.history-station h3{margin:38px 0 18px;font-size:22px}
+.history-station>div>p,.history-station li{color:#c9c9c9;font-size:18px}
+.history-station ul{margin:0;padding-left:20px}
+.history-station li{margin:0 0 17px}
+.history-station strong{color:#fff}
+.history-cta__links{display:flex;flex:0 0 auto;gap:10px}
+.history-cta__links a{white-space:nowrap}
+@media(max-width:760px){
+  .history-hero h1{font-size:47px;line-height:.98}
+  .history-content{width:calc(100% - 32px)}
+  .history-timeline{margin:75px 0}
+  .history-timeline::before{left:6px}
+  .history-chapter{grid-template-columns:1fr;gap:22px;padding:0 0 75px 28px}
+  .history-date{text-align:left}
+  .history-date::after{left:-27.5px;right:auto}
+  .history-chapter__body h2{font-size:38px}
+  .history-chapter__body p,.history-chapter__body li{font-size:17px}
+  .history-video{margin:75px 0}
+  .history-gallery{grid-template-columns:1fr;gap:16px;margin:60px -16px;padding:16px}
+  .history-gallery--archive{margin-top:-15px}
+  .history-gallery--dahab{margin-top:0;margin-bottom:75px}
+  .history-wide-photo{margin:0 -16px;padding:16px}
+  .history-station{grid-template-columns:1fr;gap:25px;margin:75px -16px 0;padding:48px 24px}
+  .history-station__year{font-size:55px}
+  .history-station h2{font-size:38px}
+  .history-station>div>p,.history-station li{font-size:17px}
+  .history-cta__links{width:100%;flex-direction:column}
+  .history-cta__links a{width:100%}
+}

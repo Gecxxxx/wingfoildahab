@@ -18,7 +18,8 @@
 | `/wingfoil_courses` | `/ru/#classes-packages` (301) |
 | `/why-bb-talkin` | Restored as a code-native article |
 | `/why-bb-talkin-en` | Restored as a code-native article |
-| Seven remaining article URLs | Temporarily removed; return 404 until rebuilt |
+| `/history-of-wingfoil` | Restored as a code-native article |
+| Six remaining article URLs | Temporarily removed; return 404 until rebuilt |
 | Blank, test and unrelated pages | 404; do not include in sitemap |
 
 ## Domain cutover
