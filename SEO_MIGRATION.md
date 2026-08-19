@@ -22,7 +22,8 @@
 | `/history-of-wingfoil-en` | Restored as a code-native article |
 | `/wingfoil-racing-freestyle` | Restored as a code-native article |
 | `/wingfoil-racing-freestyle-en` | Restored as a code-native article |
-| Three remaining article URLs | Temporarily removed; return 404 until rebuilt |
+| `/wingfoil-for-beginners` | Restored as a code-native article |
+| Two remaining article URLs | Temporarily removed; return 404 until rebuilt |
 | Blank, test and unrelated pages | 404; do not include in sitemap |
 
 ## Domain cutover
