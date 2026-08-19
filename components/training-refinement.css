@@ -28,6 +28,11 @@
   object-fit: cover;
 }
 
+.training-section--intro-spread .magazine-media img:first-child {
+  height: calc(100% - 30px) !important;
+  margin-top: 30px !important;
+}
+
 .intro-photo-caption {
   margin: 0;
   padding: 15px 18px;
@@ -119,6 +124,11 @@
   .training-section--intro-spread .magazine-media img {
     height: auto !important;
     max-height: 540px;
+  }
+
+  .training-section--intro-spread .magazine-media img:first-child {
+    height: auto !important;
+    margin-top: 0 !important;
   }
 
   .timeline-block__head {
