@@ -26,5 +26,23 @@ html{scroll-behavior:smooth}
 .vf-burger.vf-active span:nth-child(1){transform:translateY(7px) rotate(45deg)}
 .vf-burger.vf-active span:nth-child(2){opacity:0}
 .vf-burger.vf-active span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
-@media(max-width:1150px){.vf-desk-nav,.vf-social{display:none}.vf-burger{display:flex}.vf-desk-wrap{padding:0 15px}.vf-panel{overflow-y:auto;justify-content:flex-start;padding:calc(var(--vf-header-h) + 24px) 16px 32px}.vf-panel-inner{gap:24px}.vf-panel-logo img{width:115px}.vf-nav{gap:14px}.vf-panel .vf-nav-link{font-size:17px;line-height:1.3;text-align:center}.vf-m-social{gap:16px}}
+@media(max-width:1150px){
+  .vf-desk-nav,.vf-social{display:none}
+  .vf-burger{display:flex}
+  .vf-desk-wrap{padding:0 15px}
+  .vf-panel{inset:var(--vf-header-h) 0 0;overflow-y:auto;justify-content:flex-start;align-items:stretch;padding:0 18px 20px;background:#000;backdrop-filter:none}
+  .vf-panel-inner{min-height:100%;align-items:stretch;gap:0}
+  .vf-panel-logo{display:none}
+  .vf-nav{width:100%;align-items:stretch;gap:0;border-top:1px solid rgba(255,255,255,.16)}
+  .vf-panel .vf-nav-link{display:flex;align-items:center;min-height:64px;padding:0 22px;border-bottom:1px solid rgba(255,255,255,.16);font-size:19px;line-height:1.15;text-align:left;letter-spacing:.09em}
+  .vf-panel .vf-nav-link:hover,.vf-panel .vf-nav-link:focus-visible{color:var(--vf-accent);background:rgba(255,90,31,.05);outline:none}
+  .vf-panel .vf-nav-link.special{color:#fff;border-width:0 0 1px;border-color:rgba(255,255,255,.16);padding:0 22px}
+  .vf-m-social{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;margin-top:auto;border-top:1px solid rgba(255,255,255,.16)}
+  .vf-m-social .vf-ico{display:flex;min-width:0;min-height:74px;align-items:center;justify-content:center;gap:9px;border-right:1px solid rgba(255,255,255,.16);color:#fff;text-decoration:none;font-size:10px;font-weight:600;letter-spacing:.04em;text-transform:uppercase}
+  .vf-m-social .vf-ico:last-child{border-right:0}
+  .vf-m-social .vf-ico img{width:24px;height:24px}
+  .vf-m-social .vf-ico[href*="t.me"]::after{content:"Telegram"}
+  .vf-m-social .vf-ico[href*="wa.me"]::after{content:"WhatsApp"}
+  .vf-m-social .vf-ico[href*="instagram"]::after{content:"Instagram"}
+}
 @media(max-width:620px){.vf-lang-btn{width:44px;min-width:44px;flex-basis:44px;height:36px;min-height:36px}}
