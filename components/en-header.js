@@ -5,6 +5,18 @@
   const root = new URL('../', document.currentScript.src);
   const asset = name => new URL(`assets/en-header/${name}`, root).href;
   const route = path => new URL(path, root).href;
+  const currentPath = location.pathname.replace(/^\/+|\/+$/g, '');
+  const russianRoutes = {
+    '': 'ru/', 'en': 'ru/', 'equipment': 'equipment-ru/',
+    'organizers': 'organizers-ru/', 'blog': 'blog-ru/',
+    'why-bb-talkin-en': 'why-bb-talkin/',
+    'history-of-wingfoil-en': 'history-of-wingfoil/',
+    'wingfoil-racing-freestyle-en': 'wingfoil-racing-freestyle/',
+    'wingfoil-for-beginners-en': 'wingfoil-for-beginners/',
+    'kite-wingfoil-or-windsurf-en': 'kite-wingfoil-or-windsurf/',
+    'why-dahab-en': 'why-dahab/'
+  };
+  const russianRoute = russianRoutes[currentPath] || 'ru/';
   const onHome = Boolean(document.getElementById('vf-en-hero-root'));
   const section = id => onHome ? id : route(id);
   const menu = [
@@ -32,7 +44,7 @@
         <nav class="vf-desk-nav" aria-label="Main navigation"><div class="vf-desk-nav-inner">${links}</div></nav>
         <div class="vf-desk-right">
           <div class="vf-social">${socials}</div>
-          <div class="vf-lang-switcher"><a href="${route('en/')}" class="vf-lang-btn active">EN</a><a href="${route(location.pathname.startsWith('/blog') ? 'blog-ru/' : 'ru/')}" class="vf-lang-btn">РУС</a></div>
+          <div class="vf-lang-switcher"><a href="${route(currentPath === 'en' ? 'en/' : currentPath ? currentPath + '/' : '')}" class="vf-lang-btn active">EN</a><a href="${route(russianRoute)}" class="vf-lang-btn">РУС</a></div>
           <button class="vf-burger" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
         </div>
       </div>
