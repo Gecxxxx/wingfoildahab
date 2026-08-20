@@ -12,6 +12,7 @@
     [route('equipment/'), 'Equipment'],
     [section('#forecast'), 'Forecast'],
     [section('#team'), 'Team'],
+    [route('blog/'), 'Blog'],
     [section('#faq'), 'FAQ'],
     [route('organizers/'), 'Organizers'],
     ['https://vetratoria.ru/', 'Windsurf', 'special'],
