@@ -3,10 +3,6 @@
   const root=new URL('../',document.currentScript.src);
   const asset=name=>new URL(`assets/header/${name}`,root).href;
   const route=path=>new URL(path,root).href;
-  const designStyle=document.createElement('link');
-  designStyle.rel='stylesheet';
-  designStyle.href=route('components/design-system.css');
-  document.head.append(designStyle);
   const menu=[[route('ru/#learning'),'Обучение'],[route('equipment-ru/'),'Снаряжение'],[route('ru/#forecast'),'Прогноз'],[route('ru/#team'),'Команда'],[route('blog-ru/'),'Блог'],[route('ru/#faq'),'ЧЗВ'],[route('organizers-ru/'),'Организаторам'],['https://vetratoria.ru/ru','Виндсерфинг','special']];
   const links=menu.map(([href,text,extra=''])=>`<a href="${href}" class="vf-nav-link ${extra}">${text}</a>`).join('');
   const socials=`<a class="vf-ico" href="https://t.me/wingfoil_center" target="_blank" rel="noopener"><img src="${asset('telegram.png')}" alt="Telegram"></a><a class="vf-ico" href="https://wa.me/201151015941" target="_blank" rel="noopener"><img src="${asset('whatsapp.png')}" alt="WhatsApp"></a><a class="vf-ico" href="https://www.instagram.com/vetratoriaofficiale/" target="_blank" rel="noopener"><img src="${asset('instagram.png')}" alt="Instagram"></a>`;

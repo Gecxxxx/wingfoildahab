@@ -5,10 +5,6 @@
   const root = new URL('../', document.currentScript.src);
   const asset = name => new URL(`assets/en-header/${name}`, root).href;
   const route = path => new URL(path, root).href;
-  const designStyle = document.createElement('link');
-  designStyle.rel = 'stylesheet';
-  designStyle.href = route('components/design-system.css');
-  document.head.append(designStyle);
   const currentPath = location.pathname.replace(/^\/+|\/+$/g, '');
   const russianRoutes = {
     '': 'ru/', 'en': 'ru/', 'equipment': 'equipment-ru/',

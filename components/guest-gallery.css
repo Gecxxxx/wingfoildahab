@@ -13,6 +13,6 @@
 .guest-gallery .guest-dot.active { background:#f05f28; transform:scale(1.4); }
 .guest-gallery .guest-footer { margin-top:35px; padding:0 20px; }
 .guest-gallery .guest-quote { color:#f05f28; font-size:clamp(16px,4vw,20px); line-height:1.5; font-weight:700; margin:0 0 25px; text-transform:uppercase; letter-spacing:.05em; }
-.guest-gallery .guest-telegram { display:inline-block; padding:18px 45px; color:#fff; background:transparent; border-radius:14px; text-decoration:none; font-weight:800; font-size:14px; line-height:1.5; text-transform:uppercase; letter-spacing:1px; border:2px solid #f05f28; transition:.3s; }
-.guest-gallery .guest-telegram:hover { background:#f05f28; transform:translateY(-3px); box-shadow:0 10px 20px rgba(240,95,40,.2); }
+.guest-gallery .guest-telegram { display:inline-block; padding:18px 45px; color:#fff; background:transparent; border-radius:0; text-decoration:none; font-weight:800; font-size:14px; line-height:1.5; text-transform:uppercase; letter-spacing:1px; border:1px solid #f05f28; transition:background-color .2s,color .2s; box-shadow:none; }
+.guest-gallery .guest-telegram:hover { background:#f05f28; transform:none; box-shadow:none; }
 @media(max-width:768px){.guest-gallery .guest-nav{display:none}.guest-gallery .guest-viewport{height:450px}.guest-gallery .guest-quote{font-size:15px}}
