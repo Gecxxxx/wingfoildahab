@@ -1,0 +1,55 @@
+:root{
+  --vf-ui-radius:0px;
+  --vf-ui-border:rgba(127,127,127,.34);
+  --vf-ui-border-light:#d7d3ca;
+  --vf-ui-heading-weight:500;
+  --vf-ui-body-weight:400;
+}
+
+/* Unified editorial typography */
+body{font-weight:var(--vf-ui-body-weight);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+main h1,main h2,main h3{font-weight:var(--vf-ui-heading-weight)!important;letter-spacing:-.035em}
+main p,main li{font-weight:var(--vf-ui-body-weight)}
+.vf-nav-link{font-weight:600;letter-spacing:.045em}
+
+/* Square surfaces and cards */
+:where(
+  .da-card,.team-card,.step-card,.price-card,.package-card,
+  .equipment-card,.advanced-card,.hydro-card,.remain-review-card,
+  .vf-blog-card,.school-item,.timeline-table,.timeline-row,
+  .training-section,.training-cta,.beginners-note,.beginners-final
+){border-radius:var(--vf-ui-radius)!important;box-shadow:none!important}
+:where(
+  .da-card,.team-card,.step-card,.price-card,.package-card,
+  .equipment-card,.advanced-card,.hydro-card,.remain-review-card
+){border:1px solid var(--vf-ui-border)!important}
+:where(.vf-blog-card,.training-section,.timeline-table,.timeline-row){border-color:var(--vf-ui-border-light)!important}
+:where(.da-card,.team-card,.step-card,.price-card,.package-card,.equipment-card,.advanced-card,.hydro-card,.vf-blog-card):hover{transform:none!important;box-shadow:none!important}
+
+/* Square buttons, tabs and controls */
+:where(
+  .btn-action,.en-hero-button,.dahab-btn,.da-btn,.da-main-btn,.fly-btn,
+  .team-btn,.steps-main-btn,.steps-modal-btn,.price-btn,.package-btn,
+  .camp-btn,.vf-blog__all,.vf-blog__tab,.vf-lang-btn,.remain-hotel-tab,
+  .package-modal-book,.modal-close-button
+){border-radius:var(--vf-ui-radius)!important;min-height:48px;padding-left:24px;padding-right:24px;font-size:12px!important;font-weight:700!important;letter-spacing:.08em;text-transform:uppercase;box-shadow:none!important}
+:where(button,input,textarea,select,.contact-modal,.hero-modal-window,.steps-modal-content,.price-modal-content,.package-modal-content,.package-modal,.camp-contact-modal){border-radius:var(--vf-ui-radius)!important;box-shadow:none!important}
+:where(input,textarea,select){border:1px solid var(--vf-ui-border)!important;font-family:"Raleway",sans-serif;font-weight:400}
+
+/* Labels and small information chips */
+:where(.step-num,.package-badge,.equipment-card__tags,.advanced-card__tags,.hydro-card__tags,.info-badge:before){border-radius:var(--vf-ui-radius)!important}
+.info-badge:before{border-width:1px!important}
+.vf-nav-link.special{border-radius:0!important}
+.vf-burger{border-radius:0!important;border:1px solid var(--vf-ui-border)!important}
+
+/* Consistent card type scale */
+:where(.team-card,.step-card,.price-card,.package-card,.equipment-card,.advanced-card,.hydro-card,.vf-blog-card) h3{font-size:clamp(21px,2vw,26px)!important;line-height:1.18!important;font-weight:500!important}
+:where(.team-card,.step-card,.price-card,.package-card,.equipment-card,.advanced-card,.hydro-card,.vf-blog-card) p{font-size:15px;line-height:1.6;font-weight:400}
+
+/* Keep naturally round brand and status elements */
+.vf-ico img,.equipment-gallery__dot{border-radius:50%!important}
+
+@media(max-width:620px){
+  :where(.btn-action,.en-hero-button,.dahab-btn,.da-btn,.da-main-btn,.fly-btn,.team-btn,.steps-main-btn,.price-btn,.package-btn,.camp-btn,.vf-blog__all){min-height:46px;padding-left:18px;padding-right:18px}
+  main h1,main h2,main h3{letter-spacing:-.025em}
+}
