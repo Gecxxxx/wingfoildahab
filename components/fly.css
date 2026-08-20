@@ -39,7 +39,7 @@
 }
 
 .fly-title {
-  margin-bottom: 60px !important;
+  margin-bottom: 60px;
   font-size: clamp(32px, 5vw, 56px);
   font-weight: 300;
   letter-spacing: 3px;
@@ -153,7 +153,7 @@
 
 @media (max-width: 768px) {
   .fly-section { padding: 70px 15px; background-attachment: scroll; }
-  .fly-title { margin-bottom: 40px !important; }
+  .fly-title { margin-bottom: 40px; }
   .fly-grid { gap: 15px; }
 }
 

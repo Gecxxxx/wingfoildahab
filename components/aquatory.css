@@ -44,7 +44,7 @@
 }
 
 .da-title {
-  margin-bottom: 25px !important;
+  margin-bottom: 25px;
   font-size: clamp(32px, 5vw, 52px);
   font-weight: 300;
   letter-spacing: 1px;
@@ -58,7 +58,7 @@
 }
 
 .da-intro {
-  margin-bottom: 35px !important;
+  margin-bottom: 35px;
   color: #444;
   font-size: 17px;
   line-height: 1.6;

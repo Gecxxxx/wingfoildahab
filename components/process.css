@@ -34,7 +34,7 @@
 }
 
 .edu-title {
-  margin-bottom: 60px !important;
+  margin-bottom: 60px;
   font-size: clamp(32px, 4.5vw, 60px);
   font-weight: 300;
   line-height: 1.1;
@@ -96,7 +96,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 30px !important;
+  margin-top: 30px;
   color: rgba(255, 255, 255, 0.6);
   font-size: 15px;
   gap: 10px;
@@ -120,5 +120,5 @@
 @media (max-width: 600px) {
   .edu-section { padding: 40px 15px; }
   .shorts-grid { grid-template-columns: 1fr; max-width: 320px; margin: 0 auto 40px; }
-  .edu-title { margin-bottom: 40px !important; }
+  .edu-title { margin-bottom: 40px; }
 }

@@ -38,9 +38,9 @@
 .vf-typography .equipment-card h3,
 .vf-typography .advanced-card h3,
 .vf-typography .hydro-card h3 {
-  font-size: var(--vf-type-card) !important;
-  font-weight: 500 !important;
-  line-height: 1.2 !important;
+  font-size: var(--vf-type-card);
+  font-weight: 500;
+  line-height: 1.2;
   letter-spacing: -0.02em;
 }
 
@@ -132,7 +132,7 @@
 }
 
 .vf-typography .vf-lang-btn {
-  font-size: 12px !important;
+  font-size: 12px;
   font-weight: 700;
   line-height: 1;
 }
@@ -152,8 +152,8 @@
 .vf-typography .contact-ok,
 .vf-typography .remain-submit {
   min-height: 48px;
-  font-size: var(--vf-type-button) !important;
-  font-weight: 700 !important;
+  font-size: var(--vf-type-button);
+  font-weight: 700;
   line-height: 1.2;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -223,7 +223,7 @@
   .vf-typography .en-hero-features-title { font-size: 18px; }
   .vf-typography .vf-panel .vf-nav-link { font-size: 15px; }
   .vf-typography .hero-wrapper a.btn-action,
-  .vf-typography .en-hero-button { font-size: 12px !important; }
+  .vf-typography .en-hero-button { font-size: 12px; }
   .vf-typography .equipment-price__table { font-size: 14px; }
   .vf-typography .equipment-price__table th { font-size: 14px; }
   .vf-typography .equipment-price__table td { font-size: 14px; }

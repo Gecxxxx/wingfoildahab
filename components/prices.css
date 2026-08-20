@@ -40,5 +40,5 @@
 .price-modal-info { width:55%; padding:50px; }
 .price-modal-info h3 { margin-top:0; color:var(--brand); font-size:28px; }
 .price-modal-meta { display:block; margin-bottom:20px; color:var(--muted); font-size:14px; font-weight:600; text-transform:uppercase; }
-.price-modal-text { margin-bottom:35px!important; color:#ccc; font-size:15px; line-height:1.7; }
+.price-modal-text { margin-bottom:35px; color:#ccc; font-size:15px; line-height:1.7; }
 @media(max-width:768px){.price-modal-content{max-height:90vh;flex-direction:column;overflow-y:auto}.price-modal-image{width:100%;height:250px}.price-modal-info{width:100%;padding:30px}}
