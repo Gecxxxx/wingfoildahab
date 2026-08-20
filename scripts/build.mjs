@@ -26,6 +26,7 @@ for (const entry of [
   "why-dahab-en",
   "wingfoil-training-dahab",
   "blog",
+  "blog-ru",
   "robots.txt",
   "sitemap.xml",
   "_redirects",
