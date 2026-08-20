@@ -11,6 +11,14 @@
   --vf-type-button: 13px;
 }
 
+/* Shared heading alignment for the main and equipment pages. */
+.vf-typography main :is(h1, h2, h3, h4) {
+  width: 100%;
+  margin-inline: auto;
+  text-align: center;
+  text-transform: uppercase;
+}
+
 .vf-typography .t-main,
 .vf-typography .en-hero-title,
 .vf-typography .equipment-hero__title {
