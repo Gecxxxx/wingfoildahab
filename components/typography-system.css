@@ -1,0 +1,231 @@
+.vf-typography {
+  --vf-type-display: 64px;
+  --vf-type-section: 48px;
+  --vf-type-card: 24px;
+  --vf-type-subsection: 18px;
+  --vf-type-lead: 18px;
+  --vf-type-body: 16px;
+  --vf-type-card-body: 15px;
+  --vf-type-note: 14px;
+  --vf-type-label: 12px;
+  --vf-type-button: 13px;
+}
+
+.vf-typography .t-main,
+.vf-typography .en-hero-title,
+.vf-typography .equipment-hero__title {
+  font-size: var(--vf-type-display);
+  font-weight: 500;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+}
+
+.vf-typography main h2:not(.equipment-hero__subtitle) {
+  font-size: var(--vf-type-section);
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+
+.vf-typography .equipment-hero__subtitle {
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+
+.vf-typography main h3,
+.vf-typography .equipment-card h3,
+.vf-typography .advanced-card h3,
+.vf-typography .hydro-card h3 {
+  font-size: var(--vf-type-card);
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.vf-typography .f-title,
+.vf-typography .en-hero-features-title {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.45;
+  letter-spacing: -0.02em;
+}
+
+.vf-typography .equipment-price__parts h4 {
+  font-size: var(--vf-type-subsection);
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.vf-typography .t-desc,
+.vf-typography .en-hero-desc,
+.vf-typography .equipment-hero__description,
+.vf-typography .team-header p,
+.vf-typography .da-intro,
+.vf-typography .vf-blog__intro,
+.vf-typography .contact-intro p {
+  font-size: var(--vf-type-lead);
+  font-weight: 400;
+  line-height: 1.55;
+  letter-spacing: 0;
+}
+
+.vf-typography .dahab-info,
+.vf-typography .remain-directions p,
+.vf-typography .remain-hotel-copy p,
+.vf-typography .equipment-price__note,
+.vf-typography .equipment-price__conditions,
+.vf-typography .contact-info {
+  font-size: var(--vf-type-body);
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.vf-typography .fly-item-text,
+.vf-typography .step-preview,
+.vf-typography .team-desc,
+.vf-typography .price-footnote,
+.vf-typography .wing-packages .package-inc li,
+.vf-typography .vf-blog-card p,
+.vf-typography .equipment-card__description,
+.vf-typography .advanced-card__description,
+.vf-typography .hydro-card__description {
+  font-size: var(--vf-type-card-body);
+  font-weight: 400;
+  line-height: 1.55;
+}
+
+.vf-typography .info-badge p,
+.vf-typography .da-card p,
+.vf-typography .remain-review-card p,
+.vf-typography .remain-faq-content p,
+.vf-typography .remain-faq-content li,
+.vf-typography .equipment-price__note--muted,
+.vf-typography .contact-location {
+  font-size: var(--vf-type-note);
+  line-height: 1.55;
+}
+
+.vf-typography .price-kicker,
+.vf-typography .edu-subtitle,
+.vf-typography .step-hint,
+.vf-typography .step-num,
+.vf-typography .vf-blog__eyebrow,
+.vf-typography .vf-blog-card__meta,
+.vf-typography .equipment-hero__kicker,
+.vf-typography .equipment-card__tags,
+.vf-typography .advanced-card__tags,
+.vf-typography .hydro-card__tags {
+  font-size: var(--vf-type-label);
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.vf-typography .vf-nav-link {
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: 0.04em;
+}
+
+.vf-typography .vf-lang-btn {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.vf-typography .hero-wrapper a.btn-action,
+.vf-typography .en-hero-button,
+.vf-typography .fly-btn,
+.vf-typography .team-btn,
+.vf-typography .price-btn,
+.vf-typography .price-equipment-link,
+.vf-typography .guest-telegram,
+.vf-typography .vf-blog__all,
+.vf-typography .remain-hotel-tab,
+.vf-typography .remain-hotel-book,
+.vf-typography .da-btn,
+.vf-typography .da-main-btn,
+.vf-typography .contact-ok,
+.vf-typography .remain-submit {
+  min-height: 48px;
+  font-size: var(--vf-type-button);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.vf-typography .equipment-price__table {
+  font-size: var(--vf-type-body);
+  line-height: 1.35;
+}
+
+.vf-typography .equipment-price__table th {
+  font-size: var(--vf-type-note);
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.vf-typography .equipment-price__table td {
+  font-size: var(--vf-type-body);
+  line-height: 1.35;
+}
+
+.vf-typography .equipment-price__table td:first-child {
+  font-weight: 600;
+}
+
+.vf-typography .remain-faq-trigger {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.vf-typography .remain-footer h3 {
+  font-size: 14px;
+  line-height: 1.4;
+  letter-spacing: 0;
+}
+
+.vf-typography .remain-footer p,
+.vf-typography .remain-footer a,
+.vf-typography .remain-footer-links {
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+@media (max-width: 1199px) {
+  .vf-typography {
+    --vf-type-display: 52px;
+    --vf-type-section: 40px;
+    --vf-type-card: 22px;
+  }
+
+  .vf-typography .equipment-hero__subtitle { font-size: 34px; }
+}
+
+@media (max-width: 767px) {
+  .vf-typography {
+    --vf-type-display: 40px;
+    --vf-type-section: 32px;
+    --vf-type-card: 20px;
+    --vf-type-subsection: 17px;
+    --vf-type-lead: 17px;
+    --vf-type-button: 12px;
+  }
+
+  .vf-typography .equipment-hero__subtitle { font-size: 28px; }
+  .vf-typography .f-title,
+  .vf-typography .en-hero-features-title { font-size: 18px; }
+  .vf-typography .vf-panel .vf-nav-link { font-size: 15px; }
+  .vf-typography .hero-wrapper a.btn-action,
+  .vf-typography .en-hero-button { font-size: 12px; }
+  .vf-typography .equipment-price__table { font-size: 14px; }
+  .vf-typography .equipment-price__table th { font-size: 14px; }
+  .vf-typography .equipment-price__table td { font-size: 14px; }
+  .vf-typography .remain-faq-trigger { font-size: 16px; }
+}
