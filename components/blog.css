@@ -1,6 +1,6 @@
 .vf-blog{background:#f4f1eb;color:#111;padding:104px 24px;font-family:"Raleway",sans-serif}
 .vf-blog__inner{max-width:1240px;margin:0 auto}
-.vf-blog__head{display:flex;align-items:flex-end;justify-content:space-between;gap:32px;margin-bottom:44px}
+.vf-blog__head{display:flex;align-items:center;justify-content:center;margin-bottom:44px;text-align:center}
 .vf-blog__eyebrow{margin:0 0 12px;color:#e85f16;font-size:13px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
 .vf-blog h2{margin:0;font-size:clamp(42px,5vw,72px);font-weight:500;line-height:.98;letter-spacing:-.04em}
 .vf-blog__intro{max-width:430px;margin:0;color:#595959;font-size:17px;line-height:1.55}
@@ -28,5 +28,5 @@
 .vf-blog__tab.is-active{border-color:#111;background:#111;color:#fff}
 .vf-blog__panel[hidden]{display:none}
 .vf-blog--page .vf-blog__grid{row-gap:34px}
-@media(max-width:900px){.vf-blog{padding:78px 20px}.vf-blog--page{padding-top:130px}.vf-blog__head{display:block}.vf-blog__intro{margin-top:22px}.vf-blog__grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:900px){.vf-blog{padding:78px 20px}.vf-blog--page{padding-top:130px}.vf-blog__grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:620px){.vf-blog{padding:64px 14px}.vf-blog--page{padding-top:112px}.vf-blog h2{font-size:42px}.vf-blog__head{margin-bottom:30px}.vf-blog__grid{grid-template-columns:1fr;gap:14px}.vf-blog-card__body{padding:22px}.vf-blog-card h3{font-size:23px}.vf-blog__tabs{margin-bottom:24px}}
