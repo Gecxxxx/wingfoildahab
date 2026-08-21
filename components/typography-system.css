@@ -11,12 +11,25 @@
   --vf-type-button: 13px;
 }
 
-/* Shared heading alignment: left on tablet/desktop, centered on mobile. */
+/* Shared heading alignment for the main and equipment pages. */
 .vf-typography main :is(h1, h2, h3, h4) {
   width: 100%;
-  margin-inline: 0;
-  text-align: left;
+  margin-inline: auto;
+  text-align: center;
   text-transform: uppercase;
+}
+
+/* Only the selected content blocks align headings left on tablet and desktop. */
+@media (min-width: 768px) {
+  .vf-typography main :is(
+    .hero-wrapper,
+    .en-hero,
+    .dahab-aquatory-final,
+    .remain-directions
+  ) :is(h1, h2, h3, h4) {
+    margin-inline: 0;
+    text-align: left;
+  }
 }
 
 .vf-typography .t-main,
@@ -217,11 +230,6 @@
 }
 
 @media (max-width: 767px) {
-  .vf-typography main :is(h1, h2, h3, h4) {
-    margin-inline: auto;
-    text-align: center;
-  }
-
   .vf-typography {
     --vf-type-display: 40px;
     --vf-type-section: 32px;
