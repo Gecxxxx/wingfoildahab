@@ -28,9 +28,9 @@
   padding-bottom:var(--vf-space-section-y);
 }
 
-.vf-ui-system #vf-packages-root{padding-top:0}
+.vf-ui-system :is(#vf-packages-root,.wing-price-record){padding-top:0}
 
-.vf-ui-system .edu-subtitle{margin-bottom:var(--vf-space-kicker-title)}
+.vf-ui-system :is(.edu-subtitle,.price-kicker){margin-bottom:var(--vf-space-kicker-title)}
 .vf-ui-system .edu-title,
 .vf-ui-system .fly-title,
 .vf-ui-system .steps-section>div>h2,
