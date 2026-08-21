@@ -1,4 +1,4 @@
-:root{--vf-ui-border:rgba(127,127,127,.34);--vf-ui-border-light:#d7d3ca}
+:root{--vf-ui-border:rgba(127,127,127,.34);--vf-ui-border-light:#d7d3ca;--vf-space-section-y:96px;--vf-space-head-content:48px;--vf-space-kicker-title:14px;--vf-space-title-subtitle:20px}
 .vf-ui-system{font-weight:400;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
 .vf-ui-system .da-card,.vf-ui-system .team-card,.vf-ui-system .step-card,.vf-ui-system .price-card,.vf-ui-system .package-card,.vf-ui-system .equipment-card,.vf-ui-system .advanced-card,.vf-ui-system .hydro-card,.vf-ui-system .remain-review-card,.vf-ui-system .vf-blog-card{border-radius:0;box-shadow:none}
 .vf-ui-system .da-card,.vf-ui-system .team-card,.vf-ui-system .step-card,.vf-ui-system .price-card,.vf-ui-system .package-card,.vf-ui-system .equipment-card,.vf-ui-system .advanced-card,.vf-ui-system .hydro-card,.vf-ui-system .remain-review-card{border:1px solid var(--vf-ui-border)}
@@ -11,3 +11,42 @@
 .vf-ui-system .info-badge:before{border-width:1px}
 .vf-ui-system .equipment-gallery__dot{border-radius:50%}
 @media(max-width:620px){.vf-ui-system .btn-action,.vf-ui-system .en-hero-button,.vf-ui-system .dahab-btn,.vf-ui-system .da-btn,.vf-ui-system .da-main-btn,.vf-ui-system .fly-btn,.vf-ui-system .team-btn,.vf-ui-system .steps-main-btn,.vf-ui-system .price-btn,.vf-ui-system .package-btn,.vf-ui-system .vf-blog__all{min-height:46px;padding-left:18px;padding-right:18px}}
+
+
+/* Shared vertical rhythm for the main content sections. */
+.vf-ui-system :is(
+  .dahab-aquatory-final,
+  .team-section,
+  .fly-section,
+  .edu-section,
+  .steps-section,
+  .wing-price-list,
+  .wing-packages,
+  .vf-blog
+){
+  padding-top:var(--vf-space-section-y);
+  padding-bottom:var(--vf-space-section-y);
+}
+
+.vf-ui-system #vf-packages-root{padding-top:0}
+
+.vf-ui-system .edu-subtitle{margin-bottom:var(--vf-space-kicker-title)}
+.vf-ui-system .edu-title,
+.vf-ui-system .fly-title,
+.vf-ui-system .steps-section>div>h2,
+.vf-ui-system .wing-price-list h2,
+.vf-ui-system .wing-packages h2{
+  margin-bottom:var(--vf-space-head-content);
+}
+
+.vf-ui-system .team-header{margin-bottom:var(--vf-space-head-content)}
+.vf-ui-system .team-header h2{margin-bottom:var(--vf-space-title-subtitle)}
+.vf-ui-system .vf-blog__head{margin-bottom:var(--vf-space-head-content)}
+
+@media(max-width:1199px){
+  :root{--vf-space-section-y:72px;--vf-space-head-content:40px;--vf-space-kicker-title:12px;--vf-space-title-subtitle:18px}
+}
+
+@media(max-width:767px){
+  :root{--vf-space-section-y:56px;--vf-space-head-content:32px;--vf-space-kicker-title:10px;--vf-space-title-subtitle:14px}
+}
