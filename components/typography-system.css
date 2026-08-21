@@ -19,17 +19,20 @@
   text-transform: uppercase;
 }
 
-/* Only the selected content blocks align headings left on tablet and desktop. */
-@media (min-width: 768px) {
-  .vf-typography main :is(
-    .hero-wrapper,
-    .en-hero,
-    .dahab-aquatory-final,
-    .remain-directions
-  ) :is(h1, h2, h3, h4) {
-    margin-inline: 0;
-    text-align: left;
-  }
+/* Only the selected content blocks align copy left on every viewport. */
+.vf-typography main :is(
+  .hero-wrapper,
+  .en-hero,
+  .dahab-aquatory-final,
+  .remain-directions,
+  .remain-hotel-copy,
+  .vf-blog-card,
+  .package-card,
+  .price-card,
+  .step-card
+) :is(h1, h2, h3, h4, p, ul, ol) {
+  margin-inline: 0;
+  text-align: left;
 }
 
 .vf-typography .t-main,
