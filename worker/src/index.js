@@ -3,6 +3,28 @@ const json = (data, status = 200) => new Response(JSON.stringify(data), {
   headers: { "content-type": "application/json; charset=utf-8" },
 });
 
+const corsHeaders = (request, env) => {
+  const origin = request.headers.get("origin");
+  const allowed = String(env.ALLOWED_ORIGINS || "")
+    .split(",")
+    .map((item) => item.trim())
+    .filter(Boolean);
+  if (!origin || !allowed.includes(origin)) return {};
+  return {
+    "access-control-allow-origin": origin,
+    "access-control-allow-methods": "POST, OPTIONS",
+    "access-control-allow-headers": "content-type",
+    "access-control-max-age": "86400",
+    vary: "Origin",
+  };
+};
+
+const withHeaders = (response, extraHeaders) => {
+  const headers = new Headers(response.headers);
+  Object.entries(extraHeaders).forEach(([name, value]) => headers.set(name, value));
+  return new Response(response.body, { status: response.status, headers });
+};
+
 const telegram = (env, method, body) => fetch(
   `https://api.telegram.org/bot${env.BOT_TOKEN}/${method}`,
   {
@@ -122,15 +144,20 @@ export default {
     }
 
     const url = new URL(request.url);
+    const cors = corsHeaders(request, env);
+    if (request.method === "OPTIONS" && ["/api/lead", "/api/telegram"].includes(url.pathname)) {
+      return new Response(null, { status: 204, headers: cors });
+    }
+    let response;
     if (request.method === "GET" && url.pathname === "/api/health") {
-      return json({ ok: true });
+      response = json({ ok: true });
+    } else if (request.method === "POST" && url.pathname === "/api/telegram") {
+      response = await handleTelegramUpdate(request, env);
+    } else if (request.method === "POST" && url.pathname === "/api/lead") {
+      response = await handleLead(request, env);
+    } else {
+      response = json({ ok: false, error: "not_found" }, 404);
     }
-    if (request.method === "POST" && url.pathname === "/api/telegram") {
-      return handleTelegramUpdate(request, env);
-    }
-    if (request.method === "POST" && url.pathname === "/api/lead") {
-      return handleLead(request, env);
-    }
-    return json({ ok: false, error: "not_found" }, 404);
+    return withHeaders(response, cors);
   },
 };

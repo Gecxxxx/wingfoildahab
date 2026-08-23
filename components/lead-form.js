@@ -1,4 +1,5 @@
 (() => {
+  const API_BASE = 'https://wingfoildahab.eggetsevich.workers.dev';
   const isRussian = () => document.documentElement.lang === 'ru';
 
   const enhanceForm = form => {
@@ -64,7 +65,7 @@
 
       try {
         const data = Object.fromEntries(new FormData(form));
-        const response = await fetch('/api/lead', {
+        const response = await fetch(`${API_BASE}/api/lead`, {
           method: 'POST',
           headers: { 'content-type': 'application/json' },
           body: JSON.stringify({ ...data, page: location.href }),
