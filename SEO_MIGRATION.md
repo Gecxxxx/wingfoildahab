@@ -10,11 +10,13 @@
 | `/12` | `/ru/` (301) |
 | `/equipment1` | `/equipment-ru/` (301) |
 | `/equipment-en` | `/equipment/` (301) |
+| `/testpageeq` | `/equipment/` (301) |
 | `/equipment` | `/equipment/` |
 | `/equipment-ru` | `/equipment-ru/` |
 | `/organizers` | `/organizers/` |
 | `/organizers-ru` | `/organizers-ru/` |
 | `/page62420279.html` | `/organizers-ru/` (301) |
+| `/camp` | `/organizers/` (301) |
 | `/wingfoil_courses` | `/ru/#classes-packages` (301) |
 | `/why-bb-talkin` | Restored as a code-native article |
 | `/why-bb-talkin-en` | Restored as a code-native article |

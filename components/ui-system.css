@@ -74,6 +74,13 @@
 .vf-ui-system .remain-directions{padding-bottom:var(--vf-space-section-join)}
 .vf-ui-system .remain-hotels{padding-top:var(--vf-space-section-compact)}
 
+/* Release-ready homepage balance: compact Russian hero and clearer dark-card copy. */
+.vf-ui-system .hero-wrapper .content-grid{grid-template-columns:minmax(0,1.34fr) minmax(420px,.66fr);gap:44px}
+.vf-ui-system .hero-wrapper .info-badge{margin-bottom:22px}
+.vf-ui-system .hero-wrapper .t-main{max-width:790px;font-size:clamp(30px,3.65vw,50px);line-height:1.08;letter-spacing:-.025em}
+.vf-ui-system :where(.price-meta,.package-list,.package-list li,.price-footnote){color:#aaa}
+.vf-ui-system .price-body{padding-top:24px;padding-bottom:24px}
+
 .vf-ui-system :is(#vf-packages-root,.wing-price-record){padding-top:0}
 
 .vf-ui-system :is(.edu-subtitle,.price-kicker){margin-bottom:var(--vf-space-kicker-title)}
@@ -91,6 +98,9 @@
 
 @media(max-width:1199px){
   :root{--vf-space-section-y:72px;--vf-space-section-compact:56px;--vf-space-section-join:40px;--vf-space-head-content:40px;--vf-space-kicker-title:12px;--vf-space-title-subtitle:16px;--vf-space-grid:20px;--vf-anchor-offset:96px}
+  .vf-ui-system .hero-wrapper .content-grid{grid-template-columns:1fr;gap:32px}
+  .vf-ui-system .hero-wrapper .t-main{max-width:760px}
+  .vf-ui-system .hero-wrapper .block-right{max-width:720px}
 }
 
 @media(max-width:767px){

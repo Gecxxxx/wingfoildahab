@@ -76,7 +76,7 @@ async function handleLead(request, env) {
   const contact = String(body.contact || "").trim().slice(0, 200);
   const page = String(body.page || "").trim().slice(0, 500);
 
-  if (!contact || !email || !/^\S+@\S+\.\S+$/.test(email)) {
+  if (!name || !contact || (email && !/^\S+@\S+\.\S+$/.test(email))) {
     return json({ ok: false, error: "invalid_form" }, 400);
   }
 
@@ -91,7 +91,7 @@ async function handleLead(request, env) {
     "🚀 <b>Новая заявка с wingfoildahab.com</b>",
     "",
     `<b>Имя / комментарий:</b> ${escapeHtml(name || "не указано")}`,
-    `<b>Email:</b> ${escapeHtml(email)}`,
+    `<b>Email:</b> ${escapeHtml(email || "не указан")}`,
     `<b>Способ связи:</b> ${escapeHtml(method || "не указан")}`,
     `<b>Контакт:</b> ${escapeHtml(contact)}`,
     `<b>Страница:</b> ${escapeHtml(page || "не определена")}`,

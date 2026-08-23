@@ -6,14 +6,20 @@
 .remain-form__image img{width:100%;display:block}
 .remain-form form{display:flex;flex-direction:column;gap:12px}
 .remain-form label,.remain-form legend{font-size:14px;margin:0 0 3px}
-.remain-form input{width:100%;height:48px;border:0;border-bottom:1px solid #b3b3b3;padding:0 5px;font:16px Raleway;background:#fff}
+.remain-form label{display:block}
+.remain-form .remain-required{color:#b8441d}
+.remain-form .remain-optional{color:#6f6f6f;font-size:12px}
+.remain-form input{width:100%;height:48px;border:0;border-bottom:1px solid #8b8b8b;padding:0 5px;font:16px Raleway;background:#fff;color:#111}
+.remain-form input:focus-visible{outline:2px solid #f05f28;outline-offset:2px;border-bottom-color:#f05f28}
 .remain-form fieldset{border:0;padding:0;margin:0}
 .remain-methods{display:flex;gap:22px;margin:8px 0}
 .remain-methods label{display:flex;gap:7px;align-items:center}
 .remain-methods input{width:auto;height:auto}
-.remain-submit{height:52px;border:1px solid #f05f28;border-radius:14px;background:#fff;font:400 16px Raleway;cursor:pointer;transition:.2s}
-.remain-submit:hover{background:#f05f28}
-.remain-success{display:none;padding:12px;background:#f05f28;color:#463f3f}
+.remain-submit{height:52px;border:1px solid #f05f28;border-radius:0;background:#f05f28;color:#fff;font:700 14px Raleway;letter-spacing:.06em;text-transform:uppercase;cursor:pointer;transition:.2s}
+.remain-submit:hover{background:#d94d18;border-color:#d94d18}
+.remain-submit:focus-visible{outline:3px solid #111;outline-offset:3px}
+.remain-submit:disabled{opacity:.65;cursor:wait}
+.remain-success{display:none;padding:12px;background:#f05f28;color:#111;font-weight:600}
 .remain-success.active{display:block}
 
 .remain-reviews-record{background:#000}
@@ -101,6 +107,8 @@
 .remain-footer a{color:inherit}
 .remain-footer h3{font-size:14px;margin:0 0 15px}
 .remain-footer-links{font-size:12px;line-height:1.8}
+
+.vf-ui-system :where(a,button,input,textarea,select,[tabindex]):focus-visible{outline:3px solid #ff5a1f;outline-offset:3px}
 
 @media(max-width:600px){.remain-forecast-record{height:auto}
 .remain-forecast{height:58px;padding:8px 12px}
