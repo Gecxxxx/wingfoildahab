@@ -4,11 +4,11 @@ The worker stores every Telegram user who sends `/start` in Cloudflare KV and se
 
 ## One-time setup
 
-1. Copy `wrangler.toml.example` to `wrangler.toml`.
-2. Run `npx wrangler kv namespace create SUBSCRIBERS` and paste the returned ID into `wrangler.toml`.
+1. Use the production `wrangler.jsonc` in the repository root.
+2. Confirm that its `SUBSCRIBERS` binding points to the production KV namespace.
 3. Run `npx wrangler secret put BOT_TOKEN` and paste the BotFather token.
 4. Generate a random webhook secret and save it with `npx wrangler secret put TELEGRAM_WEBHOOK_SECRET`.
-5. Run `npx wrangler deploy`.
+5. From the repository root, run `npx wrangler deploy`.
 6. Register the webhook:
 
 ```bash

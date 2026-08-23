@@ -1,0 +1,23 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "wingfoildahab",
+  "main": "worker/src/index.js",
+  "compatibility_date": "2026-08-18",
+  "workers_dev": true,
+  "keep_vars": true,
+  "vars": {
+    "ALLOWED_ORIGINS": "https://wingfoildahab.com,https://www.wingfoildahab.com,https://wingfoildahab.pages.dev"
+  },
+  "kv_namespaces": [
+    {
+      "binding": "SUBSCRIBERS",
+      "id": "5a9c63ad9f8f42fcb6fe4f382f7bb3ed"
+    }
+  ],
+  "secrets": {
+    "required": [
+      "BOT_TOKEN",
+      "TELEGRAM_WEBHOOK_SECRET"
+    ]
+  }
+}
