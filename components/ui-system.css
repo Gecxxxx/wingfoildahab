@@ -1,4 +1,4 @@
-:root{--vf-ui-border:rgba(127,127,127,.34);--vf-ui-border-light:#d7d3ca;--vf-space-section-y:96px;--vf-space-head-content:48px;--vf-space-kicker-title:14px;--vf-space-title-subtitle:20px}
+:root{--vf-ui-border:rgba(127,127,127,.34);--vf-ui-border-light:#d7d3ca;--vf-space-section-y:96px;--vf-space-head-content:48px;--vf-space-kicker-title:14px;--vf-space-title-subtitle:16px;--vf-space-grid:24px;--vf-anchor-offset:104px}
 .vf-ui-system{font-weight:400;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
 .vf-ui-system .da-card,.vf-ui-system .team-card,.vf-ui-system .step-card,.vf-ui-system .price-card,.vf-ui-system .package-card,.vf-ui-system .equipment-card,.vf-ui-system .advanced-card,.vf-ui-system .hydro-card,.vf-ui-system .remain-review-card,.vf-ui-system .vf-blog-card{border-radius:0;box-shadow:none}
 .vf-ui-system .da-card,.vf-ui-system .team-card,.vf-ui-system .step-card,.vf-ui-system .price-card,.vf-ui-system .package-card,.vf-ui-system .equipment-card,.vf-ui-system .advanced-card,.vf-ui-system .hydro-card,.vf-ui-system .remain-review-card{border:1px solid var(--vf-ui-border)}
@@ -28,6 +28,35 @@
   padding-bottom:var(--vf-space-section-y);
 }
 
+.vf-ui-system main section[id]{scroll-margin-top:var(--vf-anchor-offset)}
+
+/* The legacy tail now follows the same rhythm as the rebuilt sections. */
+.vf-ui-system :is(
+  .contact-intro,
+  .remain-form-record,
+  .remain-reviews,
+  .remain-directions,
+  .remain-hotels,
+  .remain-faq,
+  .remain-contacts
+){
+  padding-top:var(--vf-space-section-y);
+  padding-bottom:var(--vf-space-section-y);
+}
+
+.vf-ui-system :is(
+  .contact-intro h2,
+  .remain-reviews h2,
+  .remain-hotels h2,
+  .remain-faq h2,
+  .remain-contacts h2
+){margin-bottom:var(--vf-space-title-subtitle)}
+
+.vf-ui-system :is(
+  .remain-reviews-sub,
+  .remain-hotels-sub
+){margin-bottom:var(--vf-space-head-content)}
+
 .vf-ui-system :is(#vf-packages-root,.wing-price-record){padding-top:0}
 
 .vf-ui-system :is(.edu-subtitle,.price-kicker){margin-bottom:var(--vf-space-kicker-title)}
@@ -44,9 +73,9 @@
 .vf-ui-system .vf-blog__head{margin-bottom:var(--vf-space-head-content)}
 
 @media(max-width:1199px){
-  :root{--vf-space-section-y:72px;--vf-space-head-content:40px;--vf-space-kicker-title:12px;--vf-space-title-subtitle:18px}
+  :root{--vf-space-section-y:72px;--vf-space-head-content:40px;--vf-space-kicker-title:12px;--vf-space-title-subtitle:16px;--vf-space-grid:20px;--vf-anchor-offset:96px}
 }
 
 @media(max-width:767px){
-  :root{--vf-space-section-y:56px;--vf-space-head-content:32px;--vf-space-kicker-title:10px;--vf-space-title-subtitle:14px}
+  :root{--vf-space-section-y:56px;--vf-space-head-content:32px;--vf-space-kicker-title:10px;--vf-space-title-subtitle:12px;--vf-space-grid:16px;--vf-anchor-offset:80px}
 }

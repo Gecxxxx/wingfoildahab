@@ -1,6 +1,6 @@
-#vf-contact-root { padding-top:30px; background:#fff; }
+#vf-contact-root { background:#fff; }
 #vf-contact-root, #vf-contact-root * { box-sizing:border-box; }
-.contact-intro { background:#fff; padding:60px 20px 40px; text-align:center; font-family:"Raleway",sans-serif; }
+.contact-intro { background:#fff; padding-inline:20px; text-align:center; font-family:"Raleway",sans-serif; }
 .contact-intro .contact-wrap { max-width:1200px; margin:0 auto; }
 .contact-intro h2 { font-size:clamp(32px,5vw,48px); font-weight:400; color:#000; margin:0 0 20px; line-height:1.2; }
 .contact-intro p { font-size:18px; line-height:1.6; color:#000; max-width:800px; margin:0 auto; font-weight:300; }
