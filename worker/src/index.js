@@ -3,13 +3,24 @@ const json = (data, status = 200) => new Response(JSON.stringify(data), {
   headers: { "content-type": "application/json; charset=utf-8" },
 });
 
-const corsHeaders = (request, env) => {
-  const origin = request.headers.get("origin");
+const isAllowedOrigin = (origin, env) => {
   const allowed = String(env.ALLOWED_ORIGINS || "")
     .split(",")
     .map((item) => item.trim())
     .filter(Boolean);
-  if (!origin || !allowed.includes(origin)) return {};
+  if (allowed.includes(origin)) return true;
+  try {
+    const url = new URL(origin);
+    return url.protocol === "https:"
+      && url.hostname.endsWith(".wingfoildahab.pages.dev");
+  } catch {
+    return false;
+  }
+};
+
+const corsHeaders = (request, env) => {
+  const origin = request.headers.get("origin");
+  if (!origin || !isAllowedOrigin(origin, env)) return {};
   return {
     "access-control-allow-origin": origin,
     "access-control-allow-methods": "POST, OPTIONS",
@@ -87,7 +98,7 @@ async function listSubscribers(env) {
 
 async function handleLead(request, env) {
   const origin = request.headers.get("origin");
-  if (origin && !env.ALLOWED_ORIGINS.split(",").map((item) => item.trim()).includes(origin)) {
+  if (origin && !isAllowedOrigin(origin, env)) {
     return json({ ok: false, error: "origin_not_allowed" }, 403);
   }
 
