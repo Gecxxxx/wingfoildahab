@@ -73,6 +73,7 @@
           success.setAttribute('role', 'status');
           success.classList.add('active');
         }
+        window.ym?.(102297934, 'reachGoal', 'lead_sent');
         form.reset();
       } catch {
         if (success) {
