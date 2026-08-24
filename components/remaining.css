@@ -9,6 +9,8 @@
 .remain-form label{display:block}
 .remain-form .remain-required{color:#b8441d}
 .remain-form .remain-optional{color:#6f6f6f;font-size:12px}
+.remain-form-hint{margin:-3px 0 3px;color:#666;font-size:12px;line-height:1.45}
+.remain-form .remain-honeypot{position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden}
 .remain-form input{width:100%;height:48px;border:0;border-bottom:1px solid #8b8b8b;padding:0 5px;font:16px Raleway;background:#fff;color:#111}
 .remain-form input:focus-visible{outline:2px solid #f05f28;outline-offset:2px;border-bottom-color:#f05f28}
 .remain-form fieldset{border:0;padding:0;margin:0}
@@ -19,7 +21,8 @@
 .remain-submit:hover{background:#d94d18;border-color:#d94d18}
 .remain-submit:focus-visible{outline:3px solid #111;outline-offset:3px}
 .remain-submit:disabled{opacity:.65;cursor:wait}
-.remain-success{display:none;padding:12px;background:#f05f28;color:#111;font-weight:600}
+.remain-success{display:none;padding:12px;background:#e8f7ed;color:#12602d;border:1px solid #9ed5ae;font-weight:600}
+.remain-success.error{background:#fff0ed;color:#8b2b18;border-color:#e3a697}
 .remain-success.active{display:block}
 
 .remain-reviews-record{background:#000}

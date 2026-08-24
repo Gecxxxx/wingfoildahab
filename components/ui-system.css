@@ -68,9 +68,9 @@
 .vf-ui-system .vf-blog{padding-bottom:var(--vf-space-section-join)}
 .vf-ui-system .contact-intro{
   padding-top:var(--vf-space-section-compact);
-  padding-bottom:var(--vf-space-section-join);
+  padding-bottom:24px;
 }
-.vf-ui-system .remain-form-record{padding-top:var(--vf-space-section-join)}
+.vf-ui-system .remain-form-record{padding-top:24px}
 .vf-ui-system .remain-directions{padding-bottom:var(--vf-space-section-join)}
 .vf-ui-system .remain-hotels{padding-top:var(--vf-space-section-compact)}
 
@@ -105,4 +105,6 @@
 
 @media(max-width:767px){
   :root{--vf-space-section-y:56px;--vf-space-section-compact:48px;--vf-space-section-join:32px;--vf-space-head-content:32px;--vf-space-kicker-title:10px;--vf-space-title-subtitle:12px;--vf-space-grid:16px;--vf-anchor-offset:80px}
+  .vf-ui-system .contact-intro{padding-bottom:20px}
+  .vf-ui-system .remain-form-record{padding-top:20px}
 }

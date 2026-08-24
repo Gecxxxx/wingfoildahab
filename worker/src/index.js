@@ -103,11 +103,14 @@ async function handleLead(request, env) {
   }
 
   const body = await request.json();
+  const website = String(body.website || "").trim();
   const name = String(body.name || "").trim().slice(0, 300);
   const contact = String(body.contact || "").trim().slice(0, 200);
   const page = String(body.page || "").trim().slice(0, 500);
 
-  if (!name || !contact) {
+  if (website) return json({ ok: true });
+
+  if (!name || contact.length < 7) {
     return json({ ok: false, error: "invalid_form" }, 400);
   }
 

@@ -13,11 +13,5 @@
       "binding": "SUBSCRIBERS",
       "id": "5a9c63ad9f8f42fcb6fe4f382f7bb3ed"
     }
-  ],
-  "secrets": {
-    "required": [
-      "BOT_TOKEN",
-      "TELEGRAM_WEBHOOK_SECRET"
-    ]
-  }
+  ]
 }

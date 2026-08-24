@@ -28,13 +28,14 @@
       } else if (!contactLabel) {
         const label = document.createElement('label');
         label.className = 'remain-contact-label';
-        label.innerHTML = `<span><span class="remain-required" aria-hidden="true">* </span>${isRussian() ? 'Номер телефона в WhatsApp или Telegram' : 'Phone number linked to WhatsApp or Telegram'}</span>`;
+        label.innerHTML = `<span><span class="remain-required" aria-hidden="true">* </span>${isRussian() ? 'Номер WhatsApp или Telegram' : 'WhatsApp or Telegram number'}</span>`;
         contact.before(label);
         label.append(contact);
       }
     }
 
     if (success) {
+      success.dataset.successText = success.textContent;
       success.setAttribute('role', 'status');
       success.setAttribute('aria-live', 'polite');
     }
@@ -53,6 +54,7 @@
       const button = form.querySelector('[type="submit"]');
       const success = form.querySelector('.remain-success');
       const original = button?.textContent;
+      success?.classList.remove('active', 'error');
       if (button) {
         button.disabled = true;
         button.textContent = isRussian() ? 'Отправляем…' : 'Sending…';
@@ -66,12 +68,20 @@
           body: JSON.stringify({ ...data, page: location.href }),
         });
         if (!response.ok) throw new Error('lead_failed');
-        success?.classList.add('active');
+        if (success) {
+          success.textContent = success.dataset.successText;
+          success.setAttribute('role', 'status');
+          success.classList.add('active');
+        }
         form.reset();
       } catch {
-        alert(isRussian()
-          ? 'Не удалось отправить заявку. Напишите нам в Telegram или WhatsApp.'
-          : 'Could not send your request. Please contact us via Telegram or WhatsApp.');
+        if (success) {
+          success.textContent = isRussian()
+            ? 'Не удалось отправить. Напишите нам напрямую в Telegram или WhatsApp.'
+            : 'Could not send your request. Please contact us directly via Telegram or WhatsApp.';
+          success.classList.add('active', 'error');
+          success.setAttribute('role', 'alert');
+        }
       } finally {
         if (button) {
           button.disabled = false;
