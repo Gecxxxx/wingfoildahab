@@ -43,8 +43,8 @@
   gap: 60px;
 }
 
-.da-title {
-  margin-bottom: 25px;
+.dahab-aquatory-final .da-title {
+  margin-bottom: 18px;
   font-size: clamp(32px, 5vw, 52px);
   font-weight: 300;
   letter-spacing: 1px;
@@ -211,6 +211,10 @@
 }
 
 @media (max-width: 767px) {
+  .dahab-aquatory-final .da-title {
+    margin-bottom: 14px;
+  }
+
   .dahab-aquatory-final .da-intro {
     margin-bottom: 24px;
   }
