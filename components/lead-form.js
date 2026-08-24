@@ -4,7 +4,6 @@
 
   const enhanceForm = form => {
     const name = form.elements.name;
-    const email = form.elements.email;
     const contact = form.elements.contact;
     const success = form.querySelector('.remain-success');
     const button = form.querySelector('[type="submit"],button:not([type])');
@@ -18,22 +17,18 @@
       }
     }
 
-    if (email) {
-      email.required = false;
-      email.autocomplete = 'email';
-      const label = email.closest('label');
-      if (label && !label.querySelector('.remain-optional')) {
-        email.insertAdjacentHTML('beforebegin', ` <span class="remain-optional">${isRussian() ? '(необязательно)' : '(optional)'}</span>`);
-      }
-    }
-
     if (contact) {
       contact.required = true;
       contact.autocomplete = 'tel';
-      if (!contact.closest('label')) {
+      contact.type = 'tel';
+      contact.inputMode = 'tel';
+      const contactLabel = contact.closest('label');
+      if (contactLabel && !contactLabel.querySelector('.remain-required')) {
+        contactLabel.insertAdjacentHTML('afterbegin', '<span class="remain-required" aria-hidden="true">* </span>');
+      } else if (!contactLabel) {
         const label = document.createElement('label');
         label.className = 'remain-contact-label';
-        label.innerHTML = `<span><span class="remain-required" aria-hidden="true">* </span>${isRussian() ? 'Телефон или имя пользователя' : 'Phone number or username'}</span>`;
+        label.innerHTML = `<span><span class="remain-required" aria-hidden="true">* </span>${isRussian() ? 'Номер телефона в WhatsApp или Telegram' : 'Phone number linked to WhatsApp or Telegram'}</span>`;
         contact.before(label);
         label.append(contact);
       }

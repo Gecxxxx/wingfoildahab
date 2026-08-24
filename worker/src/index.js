@@ -104,12 +104,10 @@ async function handleLead(request, env) {
 
   const body = await request.json();
   const name = String(body.name || "").trim().slice(0, 300);
-  const email = String(body.email || "").trim().slice(0, 200);
-  const method = String(body.method || "").trim().slice(0, 50);
   const contact = String(body.contact || "").trim().slice(0, 200);
   const page = String(body.page || "").trim().slice(0, 500);
 
-  if (!name || !contact || (email && !/^\S+@\S+\.\S+$/.test(email))) {
+  if (!name || !contact) {
     return json({ ok: false, error: "invalid_form" }, 400);
   }
 
@@ -117,16 +115,14 @@ async function handleLead(request, env) {
   if (!subscribers.length) return json({ ok: false, error: "no_subscribers" }, 503);
 
   const leadId = `${Date.now()}-${crypto.randomUUID()}`;
-  const lead = { leadId, name, email, method, contact, page, createdAt: new Date().toISOString(), status: "pending" };
+  const lead = { leadId, name, contact, page, createdAt: new Date().toISOString(), status: "pending" };
   await env.SUBSCRIBERS.put(`lead:${leadId}`, JSON.stringify(lead), { expirationTtl: 60 * 60 * 24 * 90 });
 
   const text = [
     "🚀 <b>Новая заявка с wingfoildahab.com</b>",
     "",
-    `<b>Имя / комментарий:</b> ${escapeHtml(name || "не указано")}`,
-    `<b>Email:</b> ${escapeHtml(email || "не указан")}`,
-    `<b>Способ связи:</b> ${escapeHtml(method || "не указан")}`,
-    `<b>Контакт:</b> ${escapeHtml(contact)}`,
+    `<b>Имя:</b> ${escapeHtml(name)}`,
+    `<b>WhatsApp / Telegram:</b> ${escapeHtml(contact)}`,
     `<b>Страница:</b> ${escapeHtml(page || "не определена")}`,
   ].join("\n");
 
