@@ -10,6 +10,7 @@
     ['why-dahab/', '529dfa664a7d9457.webp', 'Дахаб', 'Почему Дахаб идеален для вингфойла', 'Ветер, ровная вода и три зоны для безопасного и быстрого прогресса.'],
     ['wingfoil-for-beginners/', 'c46be0a8cb7640a5.webp', 'Новичкам', 'Вингфойл для новичков', 'Что нужно знать перед первым выходом на воду и как начать кататься уверенно.'],
   ] : [
+    ['wingfoil-training-dahab-en/', 'wingfoil-training-dahab/photo-01.webp', 'Training', 'Wingfoil training in Dahab', 'Stages, realistic timelines and the path from your first lesson to independent flights.'],
     ['why-dahab-en/', '529dfa664a7d9457.webp', 'Dahab', 'Why Dahab is perfect for wingfoiling', 'Reliable wind, flat water and three riding zones for safe, fast progress.'],
     ['wingfoil-for-beginners-en/', 'c46be0a8cb7640a5.webp', 'Beginners', 'Wingfoil for beginners', 'What to know before your first session and how to start riding with confidence.'],
     ['history-of-wingfoil-en/', '99caf0ee7a716c35.webp', 'History', 'The history of wingfoil', 'How hydrofoils and handheld wings evolved into one of the newest water sports.'],

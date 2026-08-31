@@ -14,7 +14,8 @@
     'wingfoil-racing-freestyle-en': 'wingfoil-racing-freestyle/',
     'wingfoil-for-beginners-en': 'wingfoil-for-beginners/',
     'kite-wingfoil-or-windsurf-en': 'kite-wingfoil-or-windsurf/',
-    'why-dahab-en': 'why-dahab/'
+    'why-dahab-en': 'why-dahab/',
+    'wingfoil-training-dahab-en': 'wingfoil-training-dahab/'
   };
   const russianRoute = russianRoutes[currentPath] || 'ru/';
   const onHome = Boolean(document.getElementById('vf-en-hero-root'));
