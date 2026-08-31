@@ -19,4 +19,12 @@
     accurateTrackBounce: true,
     webvisor: true,
   });
+
+  if (!document.querySelector('script[data-contact-widget]')) {
+    const widget = document.createElement('script');
+    widget.src = new URL('contact-widget.js?v=20260831-1', document.currentScript.src).href;
+    widget.defer = true;
+    widget.dataset.contactWidget = 'true';
+    document.head.append(widget);
+  }
 })();
