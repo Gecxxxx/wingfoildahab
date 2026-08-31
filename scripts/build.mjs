@@ -27,6 +27,8 @@ for (const entry of [
   "why-dahab-en",
   "wingfoil-training-dahab",
   "wingfoil-training-dahab-en",
+  "privacy",
+  "privacy-ru",
   "blog",
   "blog-ru",
   "robots.txt",

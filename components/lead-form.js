@@ -1,6 +1,7 @@
 (() => {
   const API_BASE = 'https://wingfoildahab.eggetsevich.workers.dev';
   const isRussian = () => document.documentElement.lang === 'ru';
+  const siteRoot = new URL('../', document.currentScript.src);
 
   const enhanceForm = form => {
     const name = form.elements.name;
@@ -32,6 +33,17 @@
         contact.before(label);
         label.append(contact);
       }
+    }
+
+    if (!form.querySelector('[name="consent"]')) {
+      const consent = document.createElement('label');
+      consent.className = 'remain-consent';
+      const policyUrl = new URL(isRussian() ? 'privacy-ru/' : 'privacy/', siteRoot).href;
+      consent.innerHTML = `<input type="checkbox" name="consent" value="accepted" required><span>${isRussian()
+        ? `Я согласен(а) на <a href="${policyUrl}" target="_blank" rel="noopener">обработку персональных данных</a>`
+        : `I agree to the <a href="${policyUrl}" target="_blank" rel="noopener">processing of my personal data</a>`}</span>`;
+      const honeypot = form.querySelector('.remain-honeypot');
+      (honeypot || button)?.before(consent);
     }
 
     if (success) {
