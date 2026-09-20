@@ -120,10 +120,12 @@
 
       try {
         const data = Object.fromEntries(new FormData(form));
+        const leadPage = new URL(location.href);
+        if (data.service) leadPage.searchParams.set('request', data.service);
         const response = await fetch(`${API_BASE}/api/lead`, {
           method: 'POST',
           headers: { 'content-type': 'application/json' },
-          body: JSON.stringify({ ...data, page: location.href }),
+          body: JSON.stringify({ ...data, page: leadPage.href }),
         });
         if (!response.ok) throw new Error('lead_failed');
         if (success) {
