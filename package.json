@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "node server.mjs",
     "build": "node scripts/build.mjs",
+    "audit:links": "node scripts/audit-links.mjs",
     "preview": "node server.mjs"
   }
 }

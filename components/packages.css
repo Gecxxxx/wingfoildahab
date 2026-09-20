@@ -1,6 +1,6 @@
 #vf-packages-root { background:#111; }
 #vf-packages-root, #vf-packages-root * { box-sizing:border-box; }
-.wing-packages { --bg:#111; --card:#0f0f12; --brand:#ff5a1f; --brand-hover:#ff7843; --text:#fff; --muted:rgba(255,255,255,.5); --radius:14px; background:var(--bg); color:var(--text); padding:40px 0; font-family:"Raleway",sans-serif; }
+.wing-packages { --bg:#111; --card:#0f0f12; --brand:#ff5a1f; --brand-hover:#ff7843; --text:#fff; --muted:rgba(255,255,255,.5); --radius:14px; background:var(--bg); color:var(--text); padding:40px 0; scroll-margin-top:96px; font-family:"Raleway",sans-serif; }
 .wing-packages .packages-wrap { max-width:1200px; margin:0 auto; padding:0 15px; }
 .wing-packages h2 { font-size:clamp(28px,4vw,48px); font-weight:300; text-align:center; margin:0 0 40px; text-transform:uppercase; }
 .wing-packages .packages-orange { color:var(--brand); font-weight:700; }

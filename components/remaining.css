@@ -10,6 +10,7 @@
 .remain-form .remain-required{color:#b8441d}
 .remain-form .remain-optional{color:#6f6f6f;font-size:12px}
 .remain-form-hint{margin:-3px 0 3px;color:#666;font-size:12px;line-height:1.45}
+.remain-selection{margin:0 0 5px;padding:11px 13px;border-left:4px solid #f05f28;background:#fff3ed;color:#272727;font-size:14px;font-weight:700;line-height:1.4}
 .remain-form .remain-honeypot{position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden}
 .remain-form .remain-consent{display:grid;grid-template-columns:20px 1fr;gap:10px;align-items:start;margin:3px 0 5px;color:#555;font-size:12px;line-height:1.45;cursor:pointer}
 .remain-form .remain-consent input{width:18px;height:18px;margin:0;accent-color:#f05f28;cursor:pointer}

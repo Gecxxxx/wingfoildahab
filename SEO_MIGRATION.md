@@ -17,7 +17,7 @@
 | `/organizers-ru` | `/organizers-ru/` |
 | `/page62420279.html` | `/organizers-ru/` (301) |
 | `/camp` | `/organizers/` (301) |
-| `/wingfoil_courses` | `/ru/#classes-packages` (301) |
+| `/wingfoil_courses` | `/ru/#training-packages` (301) |
 | `/why-bb-talkin` | Restored as a code-native article |
 | `/why-bb-talkin-en` | Restored as a code-native article |
 | `/history-of-wingfoil` | Restored as a code-native article |

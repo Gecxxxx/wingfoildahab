@@ -106,6 +106,7 @@ async function handleLead(request, env) {
   const website = String(body.website || "").trim();
   const name = String(body.name || "").trim().slice(0, 300);
   const contact = String(body.contact || "").trim().slice(0, 200);
+  const service = String(body.service || "").trim().slice(0, 300);
   const page = String(body.page || "").trim().slice(0, 500);
 
   if (website) return json({ ok: true });
@@ -118,7 +119,7 @@ async function handleLead(request, env) {
   if (!subscribers.length) return json({ ok: false, error: "no_subscribers" }, 503);
 
   const leadId = `${Date.now()}-${crypto.randomUUID()}`;
-  const lead = { leadId, name, contact, page, createdAt: new Date().toISOString(), status: "pending" };
+  const lead = { leadId, name, contact, service, page, createdAt: new Date().toISOString(), status: "pending" };
   await env.SUBSCRIBERS.put(`lead:${leadId}`, JSON.stringify(lead), { expirationTtl: 60 * 60 * 24 * 90 });
 
   const text = [
@@ -126,6 +127,7 @@ async function handleLead(request, env) {
     "",
     `<b>Имя:</b> ${escapeHtml(name)}`,
     `<b>WhatsApp / Telegram:</b> ${escapeHtml(contact)}`,
+    `<b>Запрос:</b> ${escapeHtml(service || "общая консультация")}`,
     `<b>Страница:</b> ${escapeHtml(page || "не определена")}`,
   ].join("\n");
 

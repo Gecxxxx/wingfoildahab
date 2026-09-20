@@ -31,13 +31,15 @@
     [route('organizers/'), 'Organizers'],
     ['https://vetratoria.ru/', 'Windsurf', 'special'],
   ];
-  const links = menu.map(([href, text, extra = '']) =>
-    `<a href="${href}" class="vf-nav-link ${extra}"${href.startsWith('#') ? ` data-anchor="${href}"` : ''}>${text}</a>`
-  ).join('');
+  const links = menu.map(([href, text, extra = '']) => {
+    const path = new URL(href, location.href).pathname.replace(/\/$/, '');
+    const active = !href.startsWith('#') && path === location.pathname.replace(/\/$/, '');
+    return `<a href="${href}" class="vf-nav-link ${extra}"${href.startsWith('#') ? ` data-anchor="${href}"` : ''}${active ? ' aria-current="page"' : ''}>${text}</a>`;
+  }).join('');
   const socials = `
-    <a class="vf-ico" href="https://t.me/wingfoil_center" target="_blank" rel="noopener"><img src="${asset('telegram.png')}" alt="TG"></a>
-    <a class="vf-ico" href="https://wa.me/201151015941" target="_blank" rel="noopener"><img src="${asset('whatsapp.png')}" alt="WA"></a>
-    <a class="vf-ico" href="https://www.instagram.com/vetratoriaofficiale/" target="_blank" rel="noopener"><img src="${asset('instagram.png')}" alt="IG"></a>`;
+    <a class="vf-ico" href="https://t.me/wingfoil_center" target="_blank" rel="noopener" aria-label="Vetratoria Telegram chat" title="Vetratoria Telegram chat"><img src="${asset('telegram.png')}" alt=""></a>
+    <a class="vf-ico" href="https://wa.me/201151015941" target="_blank" rel="noopener" aria-label="Message our manager on WhatsApp"><img src="${asset('whatsapp.png')}" alt=""></a>
+    <a class="vf-ico" href="https://www.instagram.com/vetratoriaofficiale/" target="_blank" rel="noopener" aria-label="Vetratoria on Instagram"><img src="${asset('instagram.png')}" alt=""></a>`;
 
   mount.innerHTML = `
     <header id="vf-fixed-menu" class="vf-desk-menu">
@@ -46,7 +48,7 @@
         <nav class="vf-desk-nav" aria-label="Main navigation"><div class="vf-desk-nav-inner">${links}</div></nav>
         <div class="vf-desk-right">
           <div class="vf-social">${socials}</div>
-          <div class="vf-lang-switcher"><a href="${route(currentPath === 'en' ? 'en/' : currentPath ? currentPath + '/' : '')}" class="vf-lang-btn active">EN</a><a href="${route(russianRoute)}" class="vf-lang-btn">РУС</a></div>
+          <div class="vf-lang-switcher"><a href="${route(currentPath === 'en' ? 'en/' : currentPath ? currentPath + '/' : '')}" class="vf-lang-btn active" aria-current="page">EN</a><a href="${route(russianRoute)}" class="vf-lang-btn">РУС</a></div>
           <button class="vf-burger" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
         </div>
       </div>
@@ -61,12 +63,15 @@
 
   const burger = mount.querySelector('.vf-burger');
   const panel = mount.querySelector('.vf-panel');
+  let restoreFocus = null;
   const close = () => {
+    const wasOpen = panel.classList.contains('vf-open');
     panel.classList.remove('vf-open');
     panel.setAttribute('aria-hidden', 'true');
     burger.classList.remove('vf-active');
     burger.setAttribute('aria-expanded', 'false');
     document.body.style.overflow = '';
+    if (wasOpen) (restoreFocus || burger).focus();
   };
   burger.addEventListener('click', () => {
     const open = panel.classList.toggle('vf-open');
@@ -74,6 +79,10 @@
     burger.classList.toggle('vf-active', open);
     burger.setAttribute('aria-expanded', String(open));
     document.body.style.overflow = open ? 'hidden' : '';
+    if (open) {
+      restoreFocus = document.activeElement;
+      panel.querySelector('a')?.focus();
+    }
   });
   mount.querySelectorAll('[data-anchor]').forEach(link => link.addEventListener('click', event => {
     const target = document.querySelector(link.dataset.anchor);
@@ -82,5 +91,14 @@
     target.scrollIntoView({behavior: 'smooth'});
     close();
   }));
-  document.addEventListener('keydown', event => { if (event.key === 'Escape') close(); });
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape') close();
+    if (event.key === 'Tab' && panel.classList.contains('vf-open')) {
+      const focusable = [...panel.querySelectorAll('a,button:not([disabled])')];
+      if (!focusable.length) return;
+      const first = focusable[0], last = focusable.at(-1);
+      if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
+      else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
+    }
+  });
 })();

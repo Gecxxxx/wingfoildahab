@@ -2,12 +2,58 @@
   const API_BASE = 'https://wingfoildahab.eggetsevich.workers.dev';
   const isRussian = () => document.documentElement.lang === 'ru';
   const siteRoot = new URL('../', document.currentScript.src);
+  const serviceLabels = {
+    'wingfoil-lesson': { ru: 'Урок вингфойла', en: 'Wingfoil lesson' },
+    'organizer-camp': { ru: 'Условия для организаторов', en: 'Camp for organizers' },
+    'equipment-rental': { ru: 'Прокат снаряжения', en: 'Equipment rental' },
+    'transfer': { ru: 'Трансфер из аэропорта', en: 'Airport transfer' },
+  };
+
+  const localizedService = value => {
+    const item = serviceLabels[value];
+    return item ? item[isRussian() ? 'ru' : 'en'] : value;
+  };
+
+  const serviceFromPage = () => {
+    const query = new URLSearchParams(location.search).get('service');
+    if (query) return localizedService(query);
+    if (/^\/equipment(?:-ru)?\//.test(location.pathname)) return localizedService('equipment-rental');
+    return sessionStorage.getItem('vfBookingService') || '';
+  };
+
+  const setService = value => {
+    const service = localizedService(value || '');
+    if (!service) return;
+    sessionStorage.setItem('vfBookingService', service);
+    document.querySelectorAll('.remain-form form').forEach(form => {
+      let input = form.elements.service;
+      if (!input) {
+        input = document.createElement('input');
+        input.type = 'hidden';
+        input.name = 'service';
+        form.append(input);
+      }
+      input.value = service;
+      const summary = form.querySelector('.remain-selection');
+      if (summary) {
+        summary.textContent = `${isRussian() ? 'Вы выбрали' : 'Selected'}: ${service}`;
+        summary.hidden = false;
+      }
+    });
+  };
 
   const enhanceForm = form => {
     const name = form.elements.name;
     const contact = form.elements.contact;
     const success = form.querySelector('.remain-success');
     const button = form.querySelector('[type="submit"],button:not([type])');
+
+    if (!form.querySelector('.remain-selection')) {
+      const summary = document.createElement('p');
+      summary.className = 'remain-selection';
+      summary.hidden = true;
+      (success || form.firstElementChild)?.after(summary);
+    }
 
     if (name) {
       name.required = true;
@@ -87,6 +133,7 @@
         }
         window.ym?.(102297934, 'reachGoal', 'lead_sent');
         form.reset();
+        setService(serviceFromPage());
       } catch {
         if (success) {
           success.textContent = isRussian()
@@ -105,5 +152,10 @@
   });
 
   new MutationObserver(init).observe(document.documentElement, { childList: true, subtree: true });
+  document.addEventListener('click', event => {
+    const trigger = event.target.closest('[data-booking-service]');
+    if (trigger) setService(trigger.dataset.bookingService);
+  }, true);
   init();
+  setService(serviceFromPage());
 })();
